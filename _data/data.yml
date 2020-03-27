@@ -3,187 +3,209 @@
 #
 
 sidebar:
-    about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
-    education: True # set to False if you want education in main section instead of in sidebar
+  about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
+  education: False # set to False if you want education in main section instead of in sidebar
 
-    # Profile information
-    name: Alan Doe
-    tagline: Full Stack Developer
-    avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+  # Profile information
+  name: Augusto Andreoli
+  tagline: Python Engineer
+  # avatar: profile.jpg #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
-    # Sidebar links
-    email: hello@webjeda.com
-    phone: 012 345 6789
-    website: blog.webjeda.com #do not add http://
-    linkedin: alandoe
-    github: sharu725
-    gitlab:
-    bitbucket:
-    twitter: '@webjeda'
-    stack-overflow: # Number/Username, e.g. 123456/alandoe
-    codewars:
-    goodreads: # Number-Username, e.g. 123456-alandoe
+  # Sidebar links
+  email: andreoliwa@gmail.com
+  phone: +49 157 8451-8364
+  city: 10435 Berlin, Germany
+  website: #do not add http://
+  linkedin: andreoliwa
+  github: andreoliwa
+  gitlab: # andreoliwa
+  bitbucket: # andreoliwa
+  twitter: # "@andreoliwa"
+  stack-overflow: 1391315/andreoliwa # Number/Username, e.g. 123456/alandoe
+  codewars:
+  goodreads: # Number-Username, e.g. 123456-alandoe
 
-    languages:
-      - idiom: English
-        level: Native
+  languages:
+    - idiom: Brazilian Portuguese
+      level: Native
+      image: brazilian-portuguese.jpg
+    - idiom: English
+      level: C1
+      image: english.jpg
+    - idiom: German
+      level: A2/B1
+      image: german.png
+    - idiom: Italian
+      level: B2
+      image: italian.jpg
 
-      - idiom: French
-        level: Professional
-
-      - idiom: Spanish
-        level: Professional
-
-    interests:
-      - item: Climbing
-        link:
-
-      - item: Snowboarding
-        link:
-
-      - item: Cooking
-        link:
+  # interests:
+  #   - item: Climbing
+  #     link:
+  #   - item: Snowboarding
+  #     link:
+  #   - item: Cooking
+  #     link:
 
 career-profile:
-    title: Career Profile
-    summary: |
-      Summarise your career here lorem ipsum dolor sit amet, consectetuer
-      adipiscing elit. You can [download this free resume/CV template here]().
-      Aenean commodo ligula eget dolor aenean massa. Cum sociis natoque
-      penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      Donec quam felis, ultricies nec, pellentesque eu.
-      Second paragraph if required.
-education:
-    - degree: MSc in Computer Science
-      university: University of London
-      time: 2011 - 2012
-      details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
-    - degree: BSc in Applied Mathematics
-      university: Bristol University
-      time: 2007 - 2011
-      details: |
-        Describe your study here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-        pretium quis, sem.
-          - Bullet point
-          - Bullet point
-experiences:
-    - role: Lead Developer
-      time: 2015 - Present
-      company: Startup Hubs, San Francisco
-      details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem. Nulla consequat massa quis
-        enim. Donec pede justo. Sed ut perspiciatis unde omnis iste natus
-        error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-        architecto beatae vitae dicta sunt explicabo.
-          - Bullet point
-          - Bullet point
-    - role: Senior Software Engineer
-      time: 2014 - 2015
-      company: Google, London
-      details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem.
-          - Bullet point
-          - Bullet point
-    - role: UI Developer
-      time: 2012 - 2014
-      company: Amazon, London
-      details: |
-        Describe your role here lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-        Cum sociis natoque penatibus et magnis dis parturient montes,
-        nascetur ridiculus mus. Donec quam felis, ultricies nec,
-        pellentesque eu, pretium quis, sem.
-          - Bullet point
-          - Bullet point
-projects:
-    title: Projects
-    intro: >
-      You can list your side projects or open source libraries in this
-      section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
-    assignments:
-      - title: Velocity
-        link: "#hook"
-        tagline: "A responsive website template designed to help startups promote, market and sell their products."
-
-      - title: DevStudio
-        link: "#"
-        tagline: "A responsive website template designed to help web developers/designers market their services."
-
-      - title: Tempo
-        link: "#"
-        tagline: "A responsive website template designed to help startups promote their products or services and to attract users &amp; investors"
-
-      - title: Atom
-        link: "#"
-        tagline: "A comprehensive website template solution for startups/developers to market their mobile apps."
-
-      - title: Delta
-        link: "#"
-        tagline: "A responsive Bootstrap one page theme designed to help app developers promote their mobile apps"
-
-publications:
-    title: Publications
-    intro: |
-      You can list your publications in this section. Lorem ipsum dolor sit
-      amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
-      bibendum fringilla a eu lectus.
-    papers:
-      - title: The Art of Computer Programming
-        link: "#"
-        authors: Donald E. Knuth
-        conference: Addison-Wesley, 1968
-
-      - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
-        link: "#"
-        authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
-        conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
-
-      - title: A syntax directed compiler for Algol 60
-        link: "#"
-        authors: Edgar T. Irons
-        conference: "Comm. ACM 4 (1961), 51–55"
+  title: Summary
+  summary: |
+    - Experience of 10+ years in software development.
+    - Skilled in object oriented design, requirements analysis, database modelling, programming and user interfaces.
+    - Ease of learning, self-taught, constantly updated with specialized readings.
+    - Current stack: Python, Flask, Celery, PostgreSQL, AWS, SQLite, Ansible.
+    - Previous experience with PHP, C#, C++, ASP.NET, Oracle, MySQL, SQL Server.
+    - Object oriented programming and design (OOP).
+    - Relational databases modeling (MySQL, Oracle, SQL Server, SQLite).
+    - Backend web development, RESTful APIs.
 
 skills:
-    title: Skills &amp; Proficiency
+  title: Current Skills &amp; Proficiency
 
-    toolset:
-      - name: Python & Django
-        level: 98%
+  toolset:
+    - name: Python 3, Flask, REST API
+      level: 98%
+    - name: PostgreSQL
+      level: 98%
+    - name: Amazon AWS
+      level: 80%
+    - name: Celery, Redis
+      level: 70%
+    - name: py.test, TDD, unit tests
+      level: 80%
+    - name: Ansible
+      level: 60%
+    - name: Jenkins
+      level: 70%
+    - name: Git
+      level: 98%
+    - name: Linux/Ubuntu/CentOS
+      level: 80%
+    - name: Bash
+      level: 80%
+    - name: Regular Expressions
+      level: 90%
+    - name: Agile (Scrum/Kanban)
+      level: 90%
 
-      - name: Javascript & jQuery
-        level: 98%
+experiences:
+  - role: Python Backend Engineer
+    time: Oct, 2014 — Apr, 2020
+    company: EatFirst
+    city: Berlin, Germany
+    details: |
+      - Rewrite of a PHP application into a Python API using Flask and PostgreSQL.
+      - Online restaurant with delivery service, currently operating in London.
+      - We helped creating an API for this service, to be used by our mobile and web applications.
+      - JSON API using Python 3.5/3.6, Flask, SQLAlchemy, Celery 4.
+      - PostgreSQL 9.6 with PostGIS (for geographic objects).
+      - Payment using credit cards, SEPA, PayPal and Apple Pay through the Adyen payment gateway.
+      - Messaging integration: Mandrill and Mailchimp for e-mails, Nexmo for SMS and automated calls.
+      - Linting with pylint, flake8 (PEP8, PEP257), MyPy.
+      - Multi-language app (English/German) using Flask-Babel and Transifex for translations.
+      - Docker for local development, Jenkins for deployment, AWS for production
+        (EC2 containers, S3 bucket storage, RDS database, Fargate, Lambda).
+      - Quick involvement on the front-end project, using a Flux-like architecture,
+        with Node.js, Riot, Backbone.js, Underscore.js.
+      - Agile methodolody (Scrum/Kanban) with project management tools (Trello, Jira, Confluence)
+        and GitHub for related issues and code.
 
-      - name: Angular
-        level: 98%
+  - role: PHP Backend Engineer
+    time: Aug, 2010 — Apr, 2014
+    company: Folha de S.Paulo
+    city: São Paulo, Brazil
+    details: |
+      - Collaboration with the internally developed PHP framework and its class library.
+      - Development of web applications (administrative and public).
+      - Data modeling and object-oriented design.
+      - QA Tools: code quality and coding standards (PEAR Code Sniffer), design patterns, continuous integration (Jenkins).
+      - Internal PHP framework. Main contributed classes: Portuguese text
+        hyphenation, generic CRUDL controller, model class to manage
+        master/detail tables, data manipulation tree.
+      - Newspaper Subscriptions: migration from a desktop system (Oracle
+        Forms) to a LAMP environment.
+      - Paywall: reading limits for subscribers (Internet users can see up
+        to 40 stories per month; beyond that, only subscribers can read).
+        - First newspaper in Brazil to use this technology, based on what NYT has done in the USA.
+        - Using MongoDB and MySQL for reports (visitor count and unique hits count).
+        - Handling of 5 million records per day and up to 90 million records per month.
+      - Elections 2012
+      - Folha Classifieds: administrative and public areas (ad capture,
+        credit card charges, integration with other systems).
+        - Migration from the internal desktop system (Windows, C++) to a LAMP environment.
 
-      - name: HTML5 & CSS
-        level: 95%
+  - role: Desktop Application Engineer
+    time: Jun, 2001 — Jul, 2010
+    company: Folha de S.Paulo - Classifieds IT Department
+    city: São Paulo, Brazil
+    details: |
+      - Conversion of C++ and Visual Basic 6 desktop applications to C#.
+      - C# class libraries and OLE/ActiveX components.
+      - Maintenance of VB6 legacy code.
+      - All the Classifieds Dept. reports in C++, generating results in Excel, text files or e-mail.
+      - A C# Windows Service to update the Livraria da Folha (e-commerce bookstore)
+        inventory, using XML files to transfer data.
+      - Creating a C# class library (a rough internal framework).
+      - Internal technical documentation with Drupal CMS (after
+        researching Joomla and Wordpress). Used modules: project, issue
+        tracker, tasks, notifications, custom content types.
+      - An OLE C++ 1.52 component talking with a 16-bit DLL developed by
+        a third party, to use inside a VB6 program.
+      - Application setup wizards with NSIS (Nullsoft Scriptable Install System).
+      - Maintenance of Visual Basic 6 applications, all of them like
+        "satellites" of the main C++ ad capture system.
+      - Migration from Microsoft SourceSafe VCS to Subversion.
 
-      - name: Ruby on Rails
-        level: 85%
+projects:
+  title: Projects
+  # intro: >
+  #   You can list your side projects or open source libraries in this
+  #   section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  #   Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
+  assignments:
+    - title: Nitpick
+      link: https://github.com/andreoliwa/nitpick
+      tagline: "A code quality tool to enforce the same configuration across multiple projects"
 
-      - name: Sketch & Photoshop
-        level: 60%
+# publications:
+#   title: Publications
+#   intro: |
+#     You can list your publications in this section. Lorem ipsum dolor sit
+#     amet, consectetur adipiscing elit. Vestibulum et ligula in nunc
+#     bibendum fringilla a eu lectus.
+#   papers:
+#     - title: The Art of Computer Programming
+#       link: "#"
+#       authors: Donald E. Knuth
+#       conference: Addison-Wesley, 1968
+
+#     - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
+#       link: "#"
+#       authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
+#       conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
+
+#     - title: A syntax directed compiler for Algol 60
+#       link: "#"
+#       authors: Edgar T. Irons
+#       conference: "Comm. ACM 4 (1961), 51–55"
+
+education:
+  - degree: Bachelor Degree - Psychology (incomplete)
+    university: USP - University of São Paulo
+    # time: 1995 — 1996
+    details: |
+      I attended university in a non tech-related field.
+      It helped to open up my mind, think different and to see things from another point of view.
+  - degree: Technology Specialist / Software Engineer
+    university: Federal Technical School of São Paulo (ETFSP/IFSP)
+    # time: 1990 — 1993
+    details: |
+      Vocational school in which I learned sofware development techniques and a few programming languages:
+      - C, C++ and Pascal languages
+      - Object Oriented Programming
+      - Relational databases
+      - Scope definition, requirements analysis, logical design
+      - UML diagrams
 
 footer: >
-    Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
+  Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
