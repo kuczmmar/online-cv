@@ -107,7 +107,7 @@ experiences:
       - Optimized the invoice adjustment tool (PHP)
         - Refactored the code to make it fail-safe and reliable
       - Upgraded a SalesForce integration script written in Python 2 (Python 3.7)
-        - Remodeled it to run in a container (Docker)
+        - Remodelled it to run in a container (Docker)
         - Improved queries and overall performance/code quality (SQL)
       - Automated the install of a C#/ASP.NET application using Chocolatey and PowerShell scripts
         - Replaced the manual setup
@@ -146,7 +146,7 @@ experiences:
       - Assembled dev tools to lint and assert proper typing and code quality (PyLint, flake8, MyPy)
       - Conceptualized a multi-language application, prepared for expansion to other countries (Flask-Babel, Transifex)
         - One of the first Berlin startups to display bilingual content in English and German to customers
-      - Remodeled container deployment to use ECS Fargate, a serverless technology (Docker, AWS ECS, AWS Fargate)
+      - Remodelled container deployment to use ECS Fargate, a serverless technology (Docker, AWS ECS, AWS Fargate)
         - Minimized costs with EC2 instances
         - Allocated more containers automatically with auto-scaling when the app was not responding
       - Designed front-end pages using a Flux-like architecture (Node.js, Riot, Backbone.js, Underscore.js)
@@ -177,7 +177,7 @@ experiences:
     company: Folha de S.Paulo - Classifieds Department
     city: São Paulo, Brazil
     details: |
-      - Redesigned the blacklist app, optimizing SQL queries and reducing execuion time from hours to minutes
+      - Redesigned the blacklist app, optimizing SQL queries and reducing execution time from hours to minutes
       - Orchestrated the conversion of C++ and Visual Basic 6 desktop applications to C#
       - Designed a C++ app to concentrate all the department reports, moving code from legacy VB6 apps
         - Generated output in different formats: Excel sheets, text files or e-mail
