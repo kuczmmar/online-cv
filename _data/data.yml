@@ -69,21 +69,21 @@ skills:
       level: 80%
     - name: Celery, Redis
       level: 70%
-    - name: py.test, TDD, unit tests
+    - name: Pytest, TDD, Unit Tests
       level: 80%
     - name: Ansible
       level: 60%
     - name: Jenkins
       level: 70%
-    - name: Git/GitHub
+    - name: Git, GitHub
       level: 98%
-    - name: Linux/Ubuntu/CentOS
+    - name: Linux, Ubuntu, CentOS
       level: 80%
-    - name: Bash
+    - name: Bash Scripting
       level: 80%
     - name: Regular Expressions
       level: 90%
-    - name: Agile (Scrum/Kanban)
+    - name: Agile (Scrum, Kanban)
       level: 90%
 
 projects:
@@ -98,7 +98,7 @@ projects:
         Written in Python. Uses git-flow, Travis for CI/CD and semantic-release for automated releases.
 
 experiences:
-  - role: Python/PHP/.NET Backend Engineer / DevOps
+  - role: Python / PHP / .NET Backend Engineer &amp; DevOps
     time: Dec 2019 - Apr 2020
     company: EatFirst (acquired by B2B Food Group)
     city: Berlin, Germany
@@ -112,7 +112,7 @@ experiences:
         - Replaced the manual setup
       - Collaborated with the Product team using Jira and Confluence
 
-  - role: Python Backend Engineer / DevOps
+  - role: Python Backend Engineer &amp; DevOps
     time: Nov 2018 — Nov 2019
     company: EatFirst
     city: Berlin, Germany
