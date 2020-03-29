@@ -28,7 +28,8 @@
     a,
     .profile-container,
     .avatar,
-    .tagline {
+    .tagline,
+    .languages-container .lang-desc {
       color: unset;
     }
     // Color also had to be removed on bootstrap.min.css.
