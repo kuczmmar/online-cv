@@ -3,19 +3,19 @@
 
     {% if sidebar.email %}
     <li class="email"><i class="fas fa-envelope"></i>
-      <a href="mailto:{{ sidebar.email }}">{{ sidebar.email }}</a>
+      <a href="mailto:{{ sidebar.email }}" target="_blank">{{ sidebar.email }}</a>
     </li>
     {% endif %}
 
     {% if sidebar.phone %}
     <li class="phone"><i class="fas fa-phone"></i>
-      <a href="tel:{{ sidebar.phone }}">{{ sidebar.phone }}</a>
+      <a href="tel:{{ sidebar.phone }}" target="_blank">{{ sidebar.phone }}</a>
     </li>
     {% endif %}
 
     {% if sidebar.city %}
     <li class="city"><i class="fas fa-map"></i>
-      <a href="https://www.google.com/maps/place/{{ sidebar.city }}">{{ sidebar.city }}</a>
+      <a href="https://www.google.com/maps/place/{{ sidebar.city }}" target="_blank">{{ sidebar.city }}</a>
     </li>
     {% endif %}
 
@@ -58,6 +58,12 @@
     {% if sidebar.stack-overflow %}
     <li class="stack-overflow"><i class="fab fa-stack-overflow"></i>
       <a href="https://stackoverflow.com/users/{{ sidebar.stack-overflow }}" target="_blank">{{ sidebar.stack-overflow }}</a>
+    </li>
+    {% endif %}
+
+    {% if sidebar.stack-share %}
+    <li class="stack-share"><i class="fas fa-wrench"></i>
+      <a href="https://stackshare.io/{{ sidebar.stack-share }}" target="_blank">{{ sidebar.stack-share }}</a>
     </li>
     {% endif %}
 
