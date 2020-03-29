@@ -26,9 +26,6 @@ sidebar:
   goodreads: # Number-Username, e.g. 123456-alandoe
 
   languages:
-    - idiom: Brazilian Portuguese
-      level: Native
-      image: brazilian-portuguese.jpg
     - idiom: English
       level: C1
       image: english.jpg
@@ -38,6 +35,9 @@ sidebar:
     - idiom: Italian
       level: B2
       image: italian.jpg
+    - idiom: Brazilian Portuguese
+      level: Native
+      image: brazilian-portuguese.jpg
 
   # interests:
   #   - item: Climbing
@@ -51,12 +51,12 @@ career-profile:
   title: Summary
   summary: |
     I’m a backend engineer with over 10 years of experience in software development.
-    Proficient in web development, RESTful APIs, object-oriented design, requirements, analysis, database modelling (RDBMS and NoSQL).
+    Proficient in web development, RESTful APIs, object-oriented design, database modelling (RDBMS and NoSQL), conceptual and requirements analysis.
     I’m easy to learn, self-taught.
     I try to keep up to date and experiment with new technologies.
 
-    My current stack is Python, Flask, PostgreSQL, AWS, Docker, Ansible, on both macOS and Linux.
-    In the past, I have worked with other languages (PHP, C#, C++, ASP.NET), databases (MySQL, Oracle, SQL Server, SQLite) and operating systems (Windows).
+    My current stack is Python, Flask, PostgreSQL, AWS, Docker, Ansible, Celery, Redis, on both macOS and Linux.
+    In the past, I have worked with other languages (PHP, C#, C++, ASP.NET), databases (MySQL, MongoDB, Oracle, SQL Server, SQLite) and operating systems (Windows).
 skills:
   title: Current Skills &amp; Proficiency
 
@@ -85,6 +85,17 @@ skills:
       level: 90%
     - name: Agile (Scrum/Kanban)
       level: 90%
+
+projects:
+  title: Projects
+  # intro: >
+  #   You can list your side projects or open source libraries in this section.
+  assignments:
+    - title: Nitpick
+      link: https://github.com/andreoliwa/nitpick
+      tagline: >
+        A code quality tool to enforce the same configuration across multiple projects.
+        Written in Python. Uses git-flow, Travis for CI/CD and semantic-release for automated releases.
 
 experiences:
   - role: Python/PHP/.NET Backend Engineer / DevOps
@@ -117,22 +128,23 @@ experiences:
     company: EatFirst
     city: Berlin, Germany
     details: |
-      - Built a Python RESTful API from scratch to replace a PHP application (Python 3.6, Flask, PostgreSQL 9.6, Celery 4)
+      - Built a Python RESTful API from scratch to replace a PHP application (Python 3.6, Flask, PostgreSQL 9.6)
+      - Streamlined asynchronous jobs using a distributed task queue (Celery 4, Redis)
       - Shaped a flexible JSON API to be consumed by iOS, Android and web clients
       - Conceived a reliable and fail-safe payment component
         - Processed and refunded credit card, SEPA, PayPal and Apple Pay transactions via the Adyen payment gateway
-      - Introduced a comprehensive unit and integration API test suite, ensuring safe code changes
+      - Introduced a comprehensive unit/integration test suite and Sentry monitoring, ensuring safe code changes
       - Solved a "travelling salesman problem" with a Python algorithm and Google Maps/Matrix API
         - Delivered orders to customers on pre-scheduled slots using the least number of drivers and the fastest route
         - Assisted the operations team in London with driver routes simulation
         - Increased efficiency of the delivery service, avoiding human mistakes in route calculation
-      - Developed store/shop/retailer selection by using the current GPS location and PostGIS on the PostgreSQL database
-        - Increased performance on geographical SQL queries
+      - Developed store/shop/retailer selection by using the current GPS location
+        - Increased performance on geographical SQL queries (PostgreSQL, PostGIS)
       - Composed email, SMS messages and automated phone calls using Mandrill, Mailchimp and Nexmo
         - Facilitated marketing campaigns and strengthened customer communication channels
       - Assembled dev tools to lint and assert proper typing and code quality (PyLint, flake8, MyPy)
       - Conceptualized a multi-language application, prepared for expansion to other countries (Flask-Babel, Transifex)
-        - One of the first mobile apps to display bilingual content in English and German to customers
+        - One of the first Berlin startups to display bilingual content in English and German to customers
       - Remodeled container deployment to use ECS Fargate, a serverless technology (Docker, AWS ECS, AWS Fargate)
         - Minimized costs with EC2 instances
         - Allocated more containers automatically with auto-scaling when the app was not responding
@@ -145,57 +157,37 @@ experiences:
     company: Folha de S.Paulo
     city: São Paulo, Brazil
     details: |
-      - Collaboration with the internally developed PHP framework and its class library.
-      - Development of web applications (administrative and public).
-      - Data modeling and object-oriented design.
-      - QA Tools: code quality and coding standards (PEAR Code Sniffer), design patterns, continuous integration (Jenkins).
-      - Internal PHP framework. Main contributed classes: Portuguese text
-        hyphenation, generic CRUDL controller, model class to manage
-        master/detail tables, data manipulation tree.
-      - Newspaper Subscriptions: migration from a desktop system (Oracle
-        Forms) to a LAMP environment.
-      - Paywall: reading limits for subscribers (Internet users can see up
-        to 40 stories per month; beyond that, only subscribers can read).
-        - First newspaper in Brazil to use this technology, based on what NYT has done in the USA.
-        - Using MongoDB and MySQL for reports (visitor count and unique hits count).
-        - Handling of 5 million records per day and up to 90 million records per month.
-      - Elections 2012
-      - Folha Classifieds: administrative and public areas (ad capture,
-        credit card charges, integration with other systems).
-        - Migration from the internal desktop system (Windows, C++) to a LAMP environment.
+      - Collaborated on the proprietary PHP framework of the company, adding new core classes and improving existing ones
+        - Authored a hyphenation class for Portuguese words, used to split multiline text on classified ads
+        - Enhanced a class to deal with master/detail table data, facilitating the creation of admin interfaces
+        - Conceived a class to manipulate data trees, speeding up data retrieval without using slow recursion techniques
+      - Supported the migration of newspaper subscriptions from a desktop app (written in Oracle Forms) to a web app (PHP, MySQL)
+      - Participated on the Paywall project, limiting articles for readers: free access up to N stories per month; above that, only subscribers can read
+        - First newspaper in Brazil to use this technology in 2012, loosely based on what The New York Times has done in the USA
+        - Streamlined data processing to generate daily reports of visitor count and unique hits count (MongoDB, MySQL)
+        - Computed 5 million records per day and up to 90 million records per month
+      - Guided the team during the migration of classified ads from a proprietary third-party desktop system (Windows, C++) to a web app (PHP, MySQL)
+        - Overhauled the credit card app, eliminating double charges and failures, saving company money and increasing customer satisfaction
+        - Integrated the hyphenation module into the ad capture app, reducing the price of the ads for the customers
+      - Spearheaded the use of tools for code quality and coding standards: Code Sniffer, CI with Jenkins, design patterns
 
   - role: Desktop Application Engineer
     time: Jun, 2001 — Jul, 2010
-    company: Folha de S.Paulo - Classifieds IT Department
+    company: Folha de S.Paulo - Classifieds Department
     city: São Paulo, Brazil
     details: |
-      - Conversion of C++ and Visual Basic 6 desktop applications to C#.
-      - C# class libraries and OLE/ActiveX components.
-      - Maintenance of VB6 legacy code.
-      - All the Classifieds Dept. reports in C++, generating results in Excel, text files or e-mail.
-      - A C# Windows Service to update the Livraria da Folha (e-commerce bookstore)
-        inventory, using XML files to transfer data.
-      - Creating a C# class library (a rough internal framework).
-      - Internal technical documentation with Drupal CMS (after
-        researching Joomla and Wordpress). Used modules: project, issue
-        tracker, tasks, notifications, custom content types.
-      - An OLE C++ 1.52 component talking with a 16-bit DLL developed by
-        a third party, to use inside a VB6 program.
-      - Application setup wizards with NSIS (Nullsoft Scriptable Install System).
-      - Maintenance of Visual Basic 6 applications, all of them like
-        "satellites" of the main C++ ad capture system.
-      - Migration from Microsoft SourceSafe VCS to Subversion.
-
-projects:
-  title: Projects
-  # intro: >
-  #   You can list your side projects or open source libraries in this
-  #   section. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  #   Vestibulum et ligula in nunc bibendum fringilla a eu lectus.
-  assignments:
-    - title: Nitpick
-      link: https://github.com/andreoliwa/nitpick
-      tagline: "A code quality tool to enforce the same configuration across multiple projects"
+      - Redesigned the blacklist app, optimizing SQL queries and reducing execuion time from hours to minutes
+      - Orchestrated the conversion of C++ and Visual Basic 6 desktop applications to C#
+      - Designed a C++ app to concentrate all the department reports, moving code from legacy VB6 apps
+        - Generated output in different formats: Excel sheets, text files or e-mail
+      - Published a C# Windows Service to update the bookstore marketplace inventory, using XML files to transfer data
+      - Created C# class libraries, OLE/ActiveX components
+        - Initiated a C# shared class library, serving as a base for an internal framework
+        - Developed an OLE C++ 1.52 component interfacing with a third-party 16-bit DLL, enabling it to be used by a VB6 32-bit app
+      - Led the migration of version control from Microsoft SourceSafe to Subversion
+      - Maintained standalone Visual Basic 6 applications that interfaced with the third-party classified ads C++ app
+      - Produced application setup executables for standalone VB6 apps using NSIS (Nullsoft Scriptable Install System)
+      - Documented internal technical articles and how-tos with Drupal CMS, after trying Joomla and Wordpress (PHP)
 
 # publications:
 #   title: Publications
