@@ -245,11 +245,15 @@ p {
 }
 
 .skillset {
+  display: contents;
+
   .item {
-    margin-bottom: 15px;
+    line-height: 15px;
+    margin-bottom: 10px;
     overflow: hidden;
   }
   .level-title {
+    font-weight: 700;
     font-size: 14px;
     margin-top: 0;
     margin-bottom: 12px;
