@@ -53,7 +53,8 @@ career-profile:
   summary: |
     I’m a backend engineer with over 10 years of experience in software development.
     Proficient in web development, RESTful APIs, object-oriented design, database modelling (RDBMS and NoSQL), conceptual and requirements analysis.
-    I’m easy to learn, self-taught.
+    I’m easy to learn, self-taught, detail-oriented.
+    I take ownership and suggest improvements to workflows and processes.
     I try to keep up to date and experiment with new technologies.
 
     My current stack is Python, Flask, PostgreSQL, AWS, Docker, Ansible, Celery, Redis, on both macOS and Linux.
@@ -67,6 +68,8 @@ skills:
     - name: PostgreSQL
       level: 98%
     - name: Amazon AWS
+      level: 80%
+    - name: Docker
       level: 80%
     - name: Celery, Redis
       level: 70%
@@ -119,8 +122,9 @@ experiences:
     city: Berlin, Germany
     details: |
       - Created invoice PDF files with an AWS Lambda function, replacing manual invoice generation (Python, NodeJS)
+      - Accelerated the performance of the Data Warehouse/ETL tool by limiting the initial filter to the current month (BI with Pentaho)
       - Maintained AWS infrastructure (EC2 instances, ECS Fargate Docker containers, S3 buckets, load balancers)
-      - Optimized the PostgreSQL database hosted on Amazon RDS, checking slow queries, deadlocks and indexes (AWS RDS)
+      - Optimized and tuned the PostgreSQL database hosted on Amazon RDS, checking slow queries, deadlocks and indexes (AWS RDS)
       - Upgraded the whole platform with the latest software, applying security updates and bug fixes
       - Standardized CI/CD using Jenkins Pipelines, showing a better output, making it easier to replay/rebuild jobs (Groovy)
 
@@ -129,7 +133,7 @@ experiences:
     company: EatFirst
     city: Berlin, Germany
     details: |
-      - Built a Python RESTful API from scratch to replace a PHP application (Python 3.6, Flask, PostgreSQL 9.6)
+      - Built a Python RESTful API from scratch to replace a PHP application (Python 3.6, Flask, PostgreSQL 9.6, SQLAlchemy, Alembic)
       - Streamlined asynchronous jobs using a distributed task queue (Celery 4, Redis)
       - Shaped a flexible JSON API to be consumed by iOS, Android and web clients
       - Conceived a reliable and fail-safe payment component
@@ -167,6 +171,7 @@ experiences:
         - First newspaper in Brazil to use this technology in 2012, loosely based on what The New York Times has done in the USA
         - Streamlined data processing to generate daily reports of visitor count and unique hits count (MongoDB, MySQL)
         - Computed 5 million records per day and up to 90 million records per month
+      - Implemented a fast search for newspaper articles using a full-text search engine (Sphinx search)
       - Guided the team during the migration of classified ads from a proprietary third-party desktop system (Windows, C++) to a web app (PHP, MySQL)
         - Overhauled the credit card app, eliminating double charges and failures, saving company money and increasing customer satisfaction
         - Integrated the hyphenation module into the ad capture app, reducing the price of the ads for the customers
@@ -177,12 +182,13 @@ experiences:
     company: Folha de S.Paulo - Classifieds Department
     city: São Paulo, Brazil
     details: |
-      - Redesigned the blacklist app, optimizing SQL queries and reducing execution time from hours to minutes
+      - Redesigned the blacklist app, optimized PL/SQL queries and stored procedures, reducing execution time from hours to minutes
       - Orchestrated the conversion of C++ and Visual Basic 6 desktop applications to C#
       - Designed a C++ app to concentrate all the department reports, moving code from legacy VB6 apps
         - Generated output in different formats: Excel sheets, text files or e-mail
+        - Connected to different databases: Oracle 11g/10g/9i, Microsoft SQL Server 2005/2000
       - Published a C# Windows Service to update the bookstore marketplace inventory, using XML files to transfer data
-      - Created C# class libraries, OLE/ActiveX components
+      - Created C# class libraries, OLE/ActiveX/OCX components
         - Initiated a C# shared class library, serving as a base for an internal framework
         - Developed an OLE C++ 1.52 component interfacing with a third-party 16-bit DLL, enabling it to be used by a VB6 32-bit app
       - Led the migration of version control from Microsoft SourceSafe to Subversion
