@@ -107,13 +107,9 @@ experiences:
     company: EatFirst (acquired by B2B Food Group)
     city: Berlin, Germany
     details: |
-      - Optimized the invoice adjustment tool (PHP)
-        - Refactored the code to make it fail-safe and reliable
-      - Upgraded a SalesForce integration script written in Python 2 (Python 3.7)
-        - Remodelled it to run in a container (Docker)
-        - Improved queries and overall performance/code quality (SQL)
+      - Optimized the invoice adjustment tool (PHP): refactored the code to make it fail-safe and reliable
+      - Upgraded to Python 3.7 a SalesForce integration script written in Python 2: remodelled to run on Docker, improved SQL queries and overall performance/code quality
       - Automated the install of a C#/ASP.NET application using Chocolatey and PowerShell scripts
-        - Replaced the manual setup
       - Collaborated with the Product team using Jira and Confluence
 
   - role: Python Backend Engineer &amp; DevOps
@@ -121,9 +117,9 @@ experiences:
     company: EatFirst
     city: Berlin, Germany
     details: |
-      - Created invoice PDF files with an AWS Lambda function, replacing manual invoice generation (Python, NodeJS)
+      - Created invoice PDF files with AWS Lambda, replacing manual invoices (Python, NodeJS)
       - Accelerated the performance of the Data Warehouse/ETL tool by limiting the initial filter to the current month (BI with Pentaho)
-      - Maintained AWS infrastructure (EC2 instances, ECS Fargate Docker containers, S3 buckets, load balancers)
+      - Maintained AWS infrastructure (EC2 servers, ECS Fargate containers, S3 buckets, ELB)
       - Optimized and tuned the PostgreSQL database hosted on Amazon RDS, checking slow queries, deadlocks and indexes (AWS RDS)
       - Upgraded the whole platform with the latest software, applying security updates and bug fixes
       - Standardized CI/CD using Jenkins Pipelines, showing a better output, making it easier to replay/rebuild jobs (Groovy)
@@ -230,11 +226,9 @@ education:
     # time: 1990 — 1993
     details: |
       Vocational school in which I learned sofware development techniques and a few programming languages:
-      - C, C++ and Pascal languages
-      - Object Oriented Programming
+      - C, C++ and Pascal languages, Object-Oriented Programming
       - Relational databases
-      - Scope definition, requirements analysis, logical design
-      - UML diagrams
+      - Scope definition, requirements analysis, logical design, UML diagrams
 
 footer: >
   Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
