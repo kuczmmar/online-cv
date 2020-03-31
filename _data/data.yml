@@ -135,7 +135,7 @@ experiences:
       - Conceived a reliable and fail-safe payment component
         - Processed and refunded credit card, SEPA, PayPal and Apple Pay transactions via the Adyen payment gateway
       - Introduced a comprehensive unit/integration test suite and Sentry monitoring, ensuring safe code changes
-      - Solved a "travelling salesman problem" with a Python algorithm and Google Maps/Matrix API
+      - Optimized an algorithm for the "travelling salesman problem" with Python and Google Maps/Matrix API
         - Delivered orders to customers on pre-scheduled slots using the least number of drivers and the fastest route
         - Assisted the operations team in London with driver routes simulation
         - Increased efficiency of the delivery service, avoiding human mistakes in route calculation
