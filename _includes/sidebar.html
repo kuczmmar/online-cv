@@ -14,6 +14,9 @@
     {% if sidebar.tagline %}
     <h3 class="tagline">{{ sidebar.tagline }}</h3>
     {% endif %}
+    <div class="cvlink" > <h3 class="tagline">
+      <a class="dont-print" href="{{ sidebar.cvlink }}">View my online CV</a>
+    </h3> </div>
 
   </div><!--//profile-container-->
 
@@ -25,6 +28,7 @@
 
   {% include language.html %}
   {% include interests.html %}
+  {% include hobby.html %}
 
   {% if sidebar.about %}
     {% include about.html %}

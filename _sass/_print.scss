@@ -7,24 +7,51 @@
   }
 
   img.avatar {
-    filter: grayscale(1);
-    -webkit-filter: greyscale(1);
+    max-width: 100px;
+    padding: 0px 30px;
   }
+
+  .main-wrapper {
+    .section-title {
+      margin-bottom: 10px;
+      color: lighten($theme-color, 10%);
+    }
+          
+    .fa-inverse {
+      color: white !important;
+    }
+
+    .projects-section .item {
+      margin-bottom: 10px;
+    }
+  }
+
   .main-wrapper .time {
-    float: right;
-    -webkit-print-color-adjust: exact;
+    position: absolute;
+    right: 0;
+    top: -6px;
+    color: #97AAC3;
+    // float: right;
+    // -webkit-print-color-adjust: exact;
   }
   .main-wrapper .section {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+  }
+  .main-wrapper .company {
+    margin-bottom: -3px;
   }
   .sidebar-wrapper {
     position: static;
     float: right;
-    width: 40%;
     -webkit-print-color-adjust: exact;
+    width: 220px;
+    height: 100%;
+    min-height: 800px;
 
     // Print all the colors
     color: unset;
+    border-left: 2px solid lighten($theme-color, 40%);
+    margin-left: 1em;
     a,
     .profile-container,
     .avatar,
@@ -32,6 +59,32 @@
     .languages-container .lang-desc {
       color: unset;
     }
+    .profile-container {
+      padding: 10px;
+    }
+    .container-block-title {
+      margin-bottom: 8px;
+    }
+    .container-block {
+      padding: 20px 10px 5px 15px;
+    }
+
+    .name {
+      font-size: 25px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .tagline {
+      // font-size: ;
+    }
+
+    .cvlink {
+      display: block;
+      color: darken($theme-color, 10%);
+      text-decoration: underline;
+    }
+
     // Color also had to be removed on bootstrap.min.css.
     // There is no other way to override Bootstrap's style.
     // Replaced:
@@ -45,7 +98,8 @@
   }
 
   footer {
-    display: none;
+    padding-top: -300px;
+    // display: none;
   }
 
   // Skillset
@@ -74,4 +128,47 @@
   a.dont-print:after {
     content: "";
   }
+
+  a {
+    color: darken($theme-color, 10%);
+    text-decoration: underline;
+  }
+
+  .resume-timeline {
+    &:before {
+        display: none;
+    }
+  }
+  
+  .resume-timeline-item {
+    &:before {
+        display: none;
+  
+    }
+  }
+
+  .technology-badge {
+    padding: 2px 6px;
+    border: 2px solid lighten($theme-color, 30%);
+    color: $theme-color;
+  }
+
+  hr.print-line-upper {
+    display: block;
+    border-color: lighten($theme-color, 10%) !important;
+    margin-top: -8px;
+    margin-bottom: 4px;
+    border-width: 1px;
+  }
+  
+  hr.print-line-lower {
+    display: block;
+    border-color: lighten($theme-color, 10%) !important;
+    margin-top: 4px;
+    margin-bottom: -3px;
+    border-width: 1px;
+  }
+  
+
+
 }

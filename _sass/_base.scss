@@ -19,7 +19,9 @@ h6 {
 }
 
 a {
-  color: darken($theme-color, 15%);
+  color: lighten($theme-color, 5%);
+  text-decoration: underline;
+  text-decoration-color: lighten($theme-color, 20%);
   &:hover {
     text-decoration: underline;
     color: darken($theme-color, 30%);
@@ -99,7 +101,7 @@ p {
     }
   }
   .container-block {
-    padding: 30px;
+    padding: 25px 15px 5px 30px;
   }
   .container-block-title {
     text-transform: uppercase;
@@ -170,10 +172,10 @@ p {
     color: darken($theme-color, 15%);
     position: relative;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
   .section {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   .experiences-section,
@@ -193,7 +195,7 @@ p {
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 500;
+    font-weight: 700;
   }
   .time {
     position: absolute;
@@ -205,6 +207,32 @@ p {
   .university {
     margin-bottom: 10px;
     color: $text-grey;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .achievements,
+  .technologies {
+    font-size: 14px;
+  }
+
+  .city {
+    font-weight: 350;
+    float: right;
+  }
+
+  .inline-company {
+    color: lighten($theme-color, 20%);
+    font-size: 14px;
+  }
+  .inline-city {
+    font-weight: 350;
+    font-size: 12px;
+    letter-spacing: 1px;
+    top: 0;
+    color: #97AAC3;
+    float: right;
   }
 
   .project-title {
@@ -220,6 +248,15 @@ p {
     }
     .item {
       margin-bottom: 15px;
+    }
+    .bullet{
+      margin-left: 40px;
+      margin-right: 7px;
+    }
+
+    .project-time {
+      color: lighten($theme-color, 25%);
+      float: right;
     }
   }
 
@@ -279,4 +316,77 @@ p {
   .fa-heart {
     color: $heart;
   }
+}
+
+
+.resume-timeline {
+  padding-left: 2rem;
+
+  &:before {
+      content: "";
+      display: inline-block;
+      width: 2px;
+      height: 100%;
+      background: lighten($theme-color, 40%);
+      left: -6px;
+      top: 4px;
+      position: absolute;
+  }
+}
+
+.resume-timeline-item {
+  &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: -32px;
+      top: 2px;
+      width: 13px;
+      height: 13px;
+      border: 4px solid lighten($theme-color, 10%);
+      background: white;
+      @include border-radius(50%);
+
+  }
+}
+
+.resume-timeline-item-desc-heading {
+  font-size: 1rem;
+}
+.pb-5, .py-5 {
+  padding-bottom: 1.5rem !important;
+}
+.position-relative {
+  position: relative !important;
+}
+
+.technology-badge {
+  background-color: lighten($theme-color, 15%) !important;
+
+}
+
+hr.print-line-upper,
+hr.print-line-lower {
+  display: none;
+}
+
+hr.education-line-upper {
+  display: block;
+  border-color: lighten($theme-color, 10%) !important;
+  margin-top: -8px;
+  margin-bottom: 4px;
+  border-width: 1px;
+}
+
+hr.education-line-lower {
+  display: block;
+  border-color: lighten($theme-color, 10%) !important;
+  margin-top: -8px;
+  margin-bottom: 0px;
+  border-width: 1px;
+}
+
+.cvlink {
+  display: none;
+  margin-top: 8px;
 }

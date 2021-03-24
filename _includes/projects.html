@@ -21,7 +21,7 @@
 
       <span class="project-title">
         {% if project.link %}
-        <a href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+        <a class="dont-print" href="{{ project.link }}" target="_blank">{{ project.title }}</a>
         {% else %}
         {{ project.title }}
         {% endif %}
@@ -29,6 +29,15 @@
 
       {% if project.tagline %}
       - <span class="project-tagline">{{ project.tagline }}</span>
+      {% endif %}
+
+      {% if project.details %}
+        {% for item in project.details %}
+          <div class="d-flex flex-column flex-md-row">
+            <span class="bullet">&#8226;</span> {{ item.name }}
+              <div class="project-time">{{ item.time }}</div>
+          </div><!--//details-->
+        {% endfor %}
       {% endif %}
 
     </div><!--//item-->
