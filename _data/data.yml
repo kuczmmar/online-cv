@@ -44,6 +44,7 @@ sidebar:
           <li> Time management
           <li> Teamwork
           <li> Dedication
+          <li> Efficient organization
         </ul>
 
   hobbies:
@@ -54,26 +55,45 @@ sidebar:
   
 education:
   - degree: Computer Science BA - University of Cambridge
-    # university: USP - University of São Paulo
+    university: |
+       expected graduation date: <b>June 2022</b>
     time: 2019 — now
     details: |
-      - Expected graduation date: <b>June 2022</b>
-      - 1st year courses included: Operating systems • Machine Learning and Real-world Data
-      Software and Security Engineering • Databases • Object-Oriented Programming in Java
-      Algorithms • Digital Electronics • Hardware Practical Classes
-      - <a class="dont-print" href="https://oxbridgewomenincs8.wixsite.com/2020"> 
-          Oxbridge Women in Computer Science conference 
-        </a>
-        co-chair (120 participants online)
       - 1st yr. individual project: programming a line-following robot in Java
+      - <a class="dont-print" href="https://www.cl.cam.ac.uk/teaching/2021/"> 
+          Full course sylabus
+        </a>, my courses included:
+    subjects:
+      - year:
+        title: 1st year
+        courses:
+          - Object-Oriented Programming
+          - Operating systems 
+          - Security
+          - Databases
+          - Algorithms 
+          - Machine Learning
+          - Digital Electronics
+      - year:
+        title: 2nd year
+        courses:
+          - Computer Design (RISC-V)
+          - Compiler Construction
+          - C/C++
+          - Java
+          - Artificial Intelligence
+          - Concurrent and Distributed Systems
+          - Prolog
+
         
 
   - degree: XIIIth High School in Szczecin
-    university: repeatedly ranked as the as the 1st in Poland
+    university: Graduated with distinction from school <div class="only-online">repeatedly </div>ranked as the 1st in Poland
     time: 2016 - 2019
     details: |
-      - Graduated with distinction, Matura exam (A level equivalent) - avg. top 2% in the country
+      - Matura exam (A levels equivalent) - avg. score top 2% in the country
       - Maths, computer science, physics national competitions and camps
+  #  extended: Maths, Physics, English
 
 # career-profile:
 #   title: Summary
@@ -83,6 +103,21 @@ education:
  
 
 experiences:
+  - role: Backend Developer - University Group Project 
+    company: Microsoft Research Lab
+    companylink: https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/
+    city: Cambridge 
+    time: Jan - Mar 2021
+    details: |
+      - Prototyping an IoT-connected glucose meter with remote monitoring system
+      - Designing a NoSQL document database, and connecting to IoT hub (POST request)
+      - Close collaboration with the frontend team, developing back-end of <a href="https://gluck-meter.web.app/" class="dont-print">the website</a>
+
+    technologies:
+      - React
+      - Azure IoT
+      - Cloud Firestore
+
   - role: Full-stack Developer
     time: Jul – Sept 2020
     company: Online startup
@@ -90,7 +125,7 @@ experiences:
     details: |
       - Developing website in Python with Django, JavaScript
       - Database management - PostgreSQL, designing relations and class dependencies
-      - Creativity: adding features, predicting clients’ needs and weighing business strategies
+      - Creativity: adding features, predicting clients’ needs, weighing business strategies
       - Working remotely - improved my time and workload management;
 
     # achievements:
@@ -114,6 +149,7 @@ experiences:
   - role: Assistant programmer
     time: Jun — Aug 2019
     company: Heuthes
+    companylink: https://www.heuthes.pl/
     city: Szczecin, Poland
     details: |
       - Improving user experience of the company’s ERP system
@@ -125,18 +161,10 @@ experiences:
       - Bootstrap
       - HTML/CSS
 
-#  move to projects???
-  - role: <a class="dont-print" href="https://meetit.eu/our-camps/"> Computer Science camps </a> Operating Officer
-    time: 2019 — 2020
-    company: Meet IT Camps
-    details: |
-      - I was the manger of a camp with 60 participants from 13 countries
-      - Coordinating activities, managing human resources, inviting special guests
-      - Overseeing marketing and sponsoring initiatives, pitching development ideas
-
   - role: Programming Intern
     time: Jul — Aug 2018
-    company: Tieto Poland
+    company: Tieto EVRY Poland
+    companylink: https://www.tietoevry.com/en/
     city: Szczecin, Poland
     details: |
       - Creating CAN simulator for a car cluster using an Arduino board (month-long project)
@@ -148,9 +176,32 @@ experiences:
       - Git
       - Gerrit
 
+nontechnical:
+  - role: <a class="dont-print" href="https://oxbridgewomenincs8.wixsite.com/2020"> 
+          Oxbridge Women in Computer Science conference
+        </a>  co-chair
+    company: Women@CL Cambidge University
+    time: 2020
+    details: |
+        - Conducted a successful outreach campaign, gathering over 120 participants
+        - Finding sponsorship, arranging cooperation with 5 tech companies
+        - Inviting keynote and student speakers, scheduling activities
+        - Setting up online conference platform, managing website schedule activities
+
+  - role: <a class="dont-print" href="https://meetit.eu/our-camps/"> Computer Science camps </a> Operating Officer
+    time: 2019 — 2020
+    company: Meet IT Camps
+    companylink: https://meetit.eu/our-camps/
+    details: |
+      - I was the manger of a camp with 60 participants from 13 countries
+      - Coordinating activities, managing human resources, inviting special guests
+      - Overseeing marketing and sponsoring initiatives, pitching development ideas
+
+
+
+
 
 projects:
-  title: Personal Development
   # intro: >
   #   You can list your side projects or open source libraries in this section.
   assignments:
@@ -215,10 +266,6 @@ skills:
 #       authors: Donald E. Knuth
 #       conference: Addison-Wesley, 1968
 
-#     - title: "Genetic Programming III: Darwinian Invention &amp Problem Solving"
-#       link: "#"
-#       authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
-#       conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
 
-# footer: >
-#   I agree that my personal data will be processed in order to recruit for the position I am applying for.
+footer: >
+  I agree that my personal data will be processed in order to recruit for the position I am applying for.

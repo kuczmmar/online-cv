@@ -1,0 +1,55 @@
+{% assign experiences = site.data.data.nontechnical %}
+{% if experiences %}
+<section class="section experiences-section">
+  <h2 class="section-title">
+    <span class="fa-stack fa-xs">
+      <i class="fas fa-circle fa-stack-2x"></i>
+      <i class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
+    </span>
+    {{ site.data.labels.nontechnical | default: "Nontechnical Experience & Projects" }}
+  </h2>
+
+  <div class="resume-section-content">
+        {% for experience in experiences %}
+          <div class="dont-break">
+              <hr class="print-line-upper">
+                <div class="d-flex flex-column flex-md-row">
+                  <div class="upper-row">
+                      <h3 class="job-title">{{ experience.role }}
+                        {% if experience.subrole %}
+                        <small class="text-muted">({{ experience.subrole }})</small>
+                        {% endif %} 
+                      </h3>
+                      <h5 class="time">{{ experience.time }}</h5>
+                  </div><!--//upper-row-->
+
+                  {% if experience.company %}
+                    <div class="company">
+                      {% if experience.companylink%}
+                      <a href="{{experience.companylink}}" target="_blank" class="dont-print"> {{ experience.company }} </a>
+                      {% else %}
+                      {{ experience.company }}
+                      {% endif %}
+                      {% if experience.city %}
+                        <span class="city"><i class="fas fa-map-pin"></i>&nbsp;{{ experience.city }}</span>
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                </div><!--//row-->
+                <hr class="print-line-lower">
+                {% if experience.details %}
+                <p>{{ experience.details | markdownify }}</p>
+                {% endif %}
+
+                {% if experience.technologies %}
+                <h4 class="technologies font-weight-bold">{{ site.data.labels.technologies | default: "Technologies used" }}:</h4>
+                    {% for technology in experience.technologies %}
+                        <span class="technology-badge badge badge-primary badge-pill">{{ technology }}</span>
+                    {% endfor %}
+                {% endif %}
+              </div>
+        {% endfor %}
+</div>
+
+</section><!--//section-->
+{% endif %}

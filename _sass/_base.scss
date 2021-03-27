@@ -24,7 +24,7 @@ a {
   text-decoration-color: lighten($theme-color, 20%);
   &:hover {
     text-decoration: underline;
-    color: darken($theme-color, 30%);
+    color: darken($theme-color, 30%) !important;
   }
   &:focus {
     text-decoration: none;
@@ -130,8 +130,9 @@ p {
     }
     .time {
       color: rgba(256, 256, 256, 0.6);
-      font-weight: 500;
+      font-weight: 500 !important ;
       margin-bottom: 0px;
+      font-size: 14px !important ;
     }
   }
   .languages-container {
@@ -175,7 +176,7 @@ p {
     margin-bottom: 15px;
   }
   .section {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
   .experiences-section,
@@ -196,25 +197,63 @@ p {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 700;
+    display: inline;
   }
   .time {
-    position: absolute;
-    right: 0;
-    top: 0;
+    // // position: absolute;
+    // right: 0;
+    // top: 0;
     color: $text-grey;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    display: inline;
+    float: right;
   }
   .company,
   .university {
-    margin-bottom: 10px;
-    color: $text-grey;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 1px;
+    margin-bottom: 10px !important;
+    color: $text-grey !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .company a {
+    margin-bottom: 10px !important;
+    color: $text-grey !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    letter-spacing: 1px !important;
+    text-decoration: none;
+
+
+    &:hover {
+      text-decoration: underline;
+      color: darken($theme-color, 30%) !important;
+    }
+    &:focus {
+      text-decoration: none;
+    }
   }
 
   .achievements,
-  .technologies {
+  .technologies,
+  .subjects {
     font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+
+  .subjects {
+    display: inline;
+  }
+  .subjects-div{
+    margin-bottom: 5px;
   }
 
   .city {
@@ -360,9 +399,8 @@ p {
   position: relative !important;
 }
 
-.technology-badge {
-  background-color: lighten($theme-color, 15%) !important;
-
+.badge {
+  background-color: lighten($theme-color, 15%);
 }
 
 hr.print-line-upper,
@@ -382,11 +420,15 @@ hr.education-line-lower {
   display: block;
   border-color: lighten($theme-color, 10%) !important;
   margin-top: -8px;
-  margin-bottom: 0px;
+  margin-bottom: 8px;
   border-width: 1px;
 }
 
 .cvlink {
   display: none;
   margin-top: 8px;
+}
+
+.only-online {
+  display: inline;
 }

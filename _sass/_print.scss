@@ -3,7 +3,11 @@
     size: A4;
   }
   body {
-    font-size: 12pt;
+    font-size: 13px;
+  }
+
+  .dont-break {
+    break-inside: avoid;
   }
 
   img.avatar {
@@ -33,6 +37,7 @@
     color: #97AAC3;
     // float: right;
     // -webkit-print-color-adjust: exact;
+    font-size: 15px;
   }
   .main-wrapper .section {
     margin-bottom: 0px;
@@ -44,7 +49,7 @@
     position: static;
     float: right;
     -webkit-print-color-adjust: exact;
-    width: 220px;
+    width: 200px;
     height: 100%;
     min-height: 800px;
 
@@ -135,6 +140,7 @@
   }
 
   .resume-timeline {
+    padding-left: 0rem;
     &:before {
         display: none;
     }
@@ -143,14 +149,22 @@
   .resume-timeline-item {
     &:before {
         display: none;
-  
     }
   }
 
-  .technology-badge {
-    padding: 2px 6px;
-    border: 2px solid lighten($theme-color, 30%);
-    color: $theme-color;
+  .badge {
+    padding: 1px 4px;
+    border: 1px solid lighten($theme-color, 10%);
+    color: darken($theme-color, 10%);
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+
+  .achievements,
+  .technologies,
+  .subjects {
+    display: inline;
   }
 
   hr.print-line-upper {
@@ -164,11 +178,18 @@
   hr.print-line-lower {
     display: block;
     border-color: lighten($theme-color, 10%) !important;
-    margin-top: 4px;
+    margin-top: -8px;
     margin-bottom: -3px;
     border-width: 1px;
   }
+
+  hr.education-line-lower {
+    margin-bottom: 5px;
+  }
   
 
+  .only-online {
+    display: none;
+  }
 
 }

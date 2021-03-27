@@ -7,7 +7,7 @@
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
     </span>
-    {{ projects.title }}
+    {{ site.data.labels.projects | default: "Projects" }}
   </h2>
 
   {% if projects.intro %}
