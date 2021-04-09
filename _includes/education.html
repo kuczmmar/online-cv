@@ -31,19 +31,34 @@
     <div class="item">
 
       <div class="meta">
-
+        <hr class="education-line-upper">
         <div class="upper-row">
           <h3 class="degree">{{ graduation.degree }}</h3>
           <div class="time">{{ graduation.time }}</div>
+          </h3>
         </div><!--//upper-row-->
 
         <div class="university">{{ graduation.university }}</div>
+        <hr class="education-line-lower">
       </div><!--//meta-->
 
       {% if graduation.details %}
       <div class="details">
         {{ graduation.details | markdownify }}
       </div><!--//details-->
+
+      {% if graduation.subjects %}
+        {% for year in graduation.subjects %}
+        <h4 class="subjects resume-timeline-item-desc-heading font-weight-bold">{{ year.title }}:</h4>
+        <div class="subjects-div">
+          {% for sub in year.courses %}
+            <span class="badge badge-primary badge-pill">{{ sub }}</span>
+          {% endfor %}
+        </div>
+        {% endfor %}
+      {% endif %}
+
+
       {% endif %}
 
     </div><!--//item-->

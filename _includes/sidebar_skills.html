@@ -1,0 +1,65 @@
+{% assign skills = site.data.data.sidebar.skills %}
+{% if skills %}
+<div class="interests-container">
+
+  <h2 class="container-block-title skills-block-title">
+    {{ site.data.labels.technical_sidebar | default: "Technical Skills" }}
+  </h2>
+
+  <div class="skills-container">
+
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+    <hr>
+
+    <div class="technical-skills">
+      {% if skills.advanced-name %}
+        <div class="name"> {{ skills.advanced-name }} </div>
+      {% endif %}
+      {% if skills.advanced %}
+      <div class="details"> {{ skills.advanced }} </div>
+      {% endif %}
+    </div>
+
+
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+    <i class="far fa-star"></i>
+    <hr>
+
+    <div class="technical-skills">
+      {% if skills.intermediate-name %}
+        <div class="name"> {{ skills.intermediate-name }} </div>
+      {% endif %}
+      {% if skills.intermediate %}
+      <div class="details"> {{ skills.intermediate }} </div>
+      {% endif %}
+    </div>
+
+
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+    <i class="far fa-star"></i>
+    <i class="far fa-star"></i>
+    <hr>
+    <div class="technical-skills">
+      {% if skills.beginner-name %}
+        <div class="name"> {{ skills.beginner-name }} </div>
+      {% endif %}
+      {% if skills.beginner %}
+      <div class="details"> {{ skills.beginner }} </div>
+      {% endif %}
+    </div>
+  </div>
+
+</div><!--//skills-->
+{% endif %}

@@ -3,28 +3,61 @@
     size: A4;
   }
   body {
-    font-size: 12pt;
+    font-size: 13px;
   }
 
-  img.avatar {
-    filter: grayscale(1);
-    -webkit-filter: greyscale(1);
+  .dont-break {
+    break-inside: avoid;
   }
-  .main-wrapper .time {
-    float: right;
-    -webkit-print-color-adjust: exact;
+
+
+  .main-wrapper {
+    .section-title {
+      margin-bottom: 13px;
+      color: lighten($theme-color, 10%);
+      break-inside: avoid;
+    }
+    .fa-inverse {
+      color: white !important;
+    }
+
+    .projects-section .item {
+      margin-bottom: 10px;
+    }
+
+    .section {
+      margin-bottom: 10px !important;
+      padding-top: 10px;
+    }
+
+    .time {
+      position: absolute;
+      right: 0;
+      top: -6px;
+      color: #97AAC3;
+      // float: right;
+      // -webkit-print-color-adjust: exact;
+      font-size: 15px;
+    }
   }
-  .main-wrapper .section {
-    margin-bottom: 20px;
+
+  .main-wrapper 
+  .main-wrapper .company {
+    margin-bottom: -3px;
   }
   .sidebar-wrapper {
     position: static;
     float: right;
-    width: 40%;
     -webkit-print-color-adjust: exact;
+    width: 170px;
+    height: 100%;
+    min-height: 1000px;
+    margin-top: 30px;
 
     // Print all the colors
     color: unset;
+    border-left: 2px solid lighten($theme-color, 40%);
+    margin-left: 1em;
     a,
     .profile-container,
     .avatar,
@@ -32,6 +65,55 @@
     .languages-container .lang-desc {
       color: unset;
     }
+    img.avatar {
+      max-width: 120px;
+      padding: 0px 30px;
+    }
+    .profile-container {
+      padding: 10px;
+      padding-top: 10px;
+    }
+    .container-block-title {
+      margin-bottom: 8px;
+    }
+    .container-block{
+      padding-right: 5px; 
+      padding-left: 20px;
+    }
+    ul.list-unstyled.contact-list {
+      margin-bottom: 0px !important;
+    }
+    .skills-block-title {
+      padding-right: 0px;
+      padding-left:  0px;
+      padding-bottom: 8px;
+    }
+
+    .name {
+      font-size: 22.5px;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    // .tagline {
+    //   padding-left: 7px;
+    // }
+
+    .cvlink {
+      display: block;
+      color: darken($theme-color, 10%);
+      text-decoration: underline;
+    }
+    .contact-list li{
+      margin-bottom: 8px;
+    }
+    .interests-container {
+      margin-left: 20px;
+    }
+    .interests-container .interests-list li{
+      margin-bottom: 2px;
+    }
+
     // Color also had to be removed on bootstrap.min.css.
     // There is no other way to override Bootstrap's style.
     // Replaced:
@@ -45,7 +127,8 @@
   }
 
   footer {
-    display: none;
+    padding-top: -300px;
+    // display: none;
   }
 
   // Skillset
@@ -73,5 +156,97 @@
   // Don't expand links for email, phone, map
   a.dont-print:after {
     content: "";
+  }
+
+  a {
+    color: darken($theme-color, 10%);
+    text-decoration: underline;
+  }
+
+  .resume-timeline {
+    padding-left: 0rem;
+    &:before {
+        display: none;
+    }
+  }
+  
+  .resume-timeline-item {
+    &:before {
+        display: none;
+    }
+  }
+
+  // .badge {
+  //   padding: 1px 4px;
+  //   border: 1px solid lighten($theme-color, 10%);
+  //   color: darken($theme-color, 10%);
+  //   font-size: 12px;
+  //   font-weight: 500;
+  // }
+  // .softskills-badge {
+  //   border: 1px solid lighten($text-color-secondary, 28%);
+  //   color: $text-color-secondary;
+  // }
+  .badge {    
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 1.5px;
+    padding: 1px 4.5px;
+    background-color: lighten($theme-color, 5%) !important;
+  }
+  // #a48fe2
+  .softskills-badge {
+    background-color: lighten($theme-color, 38%) !important;
+    color: $text-color-secondary;
+  }
+
+  .achievements,
+  .technologies,
+  .subjects {
+    display: inline;
+  }
+
+  hr.print-line-upper {
+    display: block;
+    border-color: lighten($theme-color, 10%) !important;
+    margin-top: -8px;
+    margin-bottom: 4px;
+    border-width: 1px;
+  }
+  
+  hr.print-line-lower {
+    display: block;
+    border-color: lighten($theme-color, 10%) !important;
+    margin-top: -8px;
+    margin-bottom: -3px;
+    border-width: 1px;
+  }
+
+  hr.education-line-lower {
+    margin-bottom: 5px;
+  }
+
+  .only-online {
+    display: none;
+  }
+
+  div .skills-container{
+    .fas, .far{
+      color: lighten($theme-color, 20%);
+    }
+    hr {
+      border-color: lighten($theme-color, 30%) !important;
+    }
+  
+    .technical-skills .name{
+      color: lighten($theme-color, 20%) !important ;
+      font-weight: 600 ;
+      font-size: 11px ;
+      letter-spacing: 0px ;
+    }
+  
+    .technical-skills .details{
+      margin-bottom: 10px;
+    }
   }
 }

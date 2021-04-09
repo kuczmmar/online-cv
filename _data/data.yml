@@ -1,6 +1,4 @@
-#
-# Be aware that even a small syntax error here can lead to failures in output.
-#
+# run jekyll serve
 
 sidebar:
   about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
@@ -8,189 +6,309 @@ sidebar:
 
   # Profile information
   name: Marta Walentynowicz
-  tagline: Python Engineer
-  # avatar: profile.jpg #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+  tagline: 2nd year Computer Science student at the University of Cambridge <br/>
+  cvlink: https://kuczmmar.github.io/online-cv/
+  avatar: marta.jpeg #profile.jpg #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
   # Sidebar links
-  email: andreoliwa@gmail.com
-  phone: +49 157 8451-8364
-  city: 10435 Berlin, Germany
+  email: mmk64@cam.ac.uk
+  # phone: +48 534 682 000
+  city: Cambridge, UK
   website: #do not add http://
-  linkedin: andreoliwa
-  github: andreoliwa
+  linkedin: mmk64
+  github: kuczmmar
   gitlab: # andreoliwa
   bitbucket: # andreoliwa
   twitter: # "@andreoliwa"
-  stack-overflow: 1391315/andreoliwa # Number/Username, e.g. 123456/alandoe
-  stack-share: andreoliwa/my-stack
+  # stack-overflow: 1391315/andreoliwa # Number/Username, e.g. 123456/alandoe
+  # stack-share: andreoliwa/my-stack
   codewars:
   goodreads: # Number-Username, e.g. 123456-alandoe
 
   languages:
     - idiom: English
-      level: C1
+      level: C2
       image: english.jpg
     - idiom: German
-      level: A2/B1
+      level: B1
       image: german.png
-    - idiom: Italian
-      level: B2
-      image: italian.jpg
-    - idiom: Brazilian Portuguese
+    - idiom: Polish
       level: Native
-      image: brazilian-portuguese.jpg
+      image: polish.png
 
   # interests:
-  #   - item: Climbing
-  #     link:
-  #   - item: Snowboarding
-  #     link:
-  #   - item: Cooking
-  #     link:
+  #   # used as soft skills section for me
+  #   - item:  |
+  #       <ul> 
+  #         <li> Motivation to learn
+  #         <li> Time management
+  #         <li> Teamwork
+  #         <li> Dedication
+  #         <li> Efficient organization
+  #       </ul>
+    
+  skills:
+    advanced-name:  > 
+      Experienced: 
+  # <br/>(commercial or university projects)
+    advanced: >
+      C++, C, Python, <br/>JavaScript, Git
 
-career-profile:
-  title: Summary
-  summary: |
-    I’m a backend engineer with over 10 years of experience in software development.
-    Proficient in web development, RESTful APIs, object-oriented design, database modelling (RDBMS and NoSQL), conceptual and requirements analysis.
-    I’m easy to learn, self-taught, organised, detail-oriented.
-    I take ownership and suggest improvements to workflows and processes.
-    I try to keep up to date and experiment with new technologies.
+    intermediate-name: >
+      Intermediate:
+    intermediate: Linux, SQL, Java, React, </br>Computer Networking
 
-    My current stack is Python, Flask, PostgreSQL, AWS, Docker, Ansible, Celery, Redis, on both macOS and Linux.
-    In the past, I have worked with other languages (PHP, C#, C++, ASP.NET), databases (MySQL, MongoDB, Oracle, SQL Server, SQLite) and operating systems (Windows).
-skills:
-  title: Current Skills &amp; Proficiency
+    beginner-name: >
+      Familiar with: 
+  # <br/>(coding / theoretical experience)
+    beginner: OCaml, Prolog, </br>RISC-V architecture
 
-  toolset:
-    - name: Python 3, Flask, REST API
-      level: 98%
-    - name: PostgreSQL
-      level: 98%
-    - name: Amazon AWS
-      level: 80%
-    - name: Docker
-      level: 80%
-    - name: Celery, Redis
-      level: 70%
-    - name: Pytest, TDD, Unit Tests
-      level: 80%
-    - name: Ansible
-      level: 60%
-    - name: Jenkins
-      level: 70%
-    - name: Git, GitHub
-      level: 98%
-    - name: Linux, Ubuntu, CentOS
-      level: 80%
-    - name: Bash Scripting
-      level: 80%
-    - name: Regular Expressions
-      level: 90%
-    - name: Agile (Scrum, Kanban)
-      level: 90%
+  # hobbies:
+  #   # used as soft skills section for me
+  #   - item:  Windsurfing, volleyball <br/>
+  #           (representing Cambridge in the Premier League)
+
+  
+education:
+  - degree: Computer Science BA - University of Cambridge
+    university: |
+       expected graduation date: <b>June 2022</b>
+    time: 2019 — now
+    details: |
+      - 1st year individual project: programming a line-following robot in Java
+      - <a class="dont-print" href="https://www.cl.cam.ac.uk/teaching/2021/"> 
+          Full course sylabus
+        </a>, my courses included:
+    subjects:
+      - year:
+        title: 1st year
+        courses:
+          - Object-Oriented Programming
+          - Operating systems 
+          - Security
+          - Java
+          - Databases
+          - Algorithms 
+          - Machine Learning
+          - Digital Electronics
+      - year:
+        title: 2nd year
+        courses:
+          - Computer Design (RISC-V)
+          - Compiler Construction
+          - Computer Networking
+          - C/C++
+          - Prolog
+          - Artificial Intelligence
+          - Concurrent and Distributed Systems
+
+        
+
+  - degree: XIII High School in Szczecin
+    university: Graduated with distinction from school <div class="only-online">repeatedly </div>ranked as the 1st in Poland
+    time: 2016 — 2019
+    details: |
+      - Matura exam (A levels equivalent) - avg. score top 2% in the country
+      - Maths, computer science, physics national competitions and camps
+  #  extended: Maths, Physics, English
+
+# career-profile:
+#   title: Summary
+#   summary: |
+#     I’m a 2nd year Computer Science student at the University of Cambridge.
+
+ 
+
+experiences:
+  - role: Backend Developer - University Group Project 
+    company: Microsoft Research Lab
+    companylink: https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/
+    city: Cambridge 
+    time: Jan — Mar 2021
+    details: |
+      - Prototyping an IoT-connected glucose meter with remote monitoring system
+      - Designing a NoSQL document database, and connecting it to IoT hub
+      - Collaborating with the frontend team, developing functions handling database queries
+    technologies:
+      - React
+      - Azure IoT
+      - Cloud Firestore
+      - JavaScript
+    softskills:
+      - Team work
+      - Cooperation with client
+      - Requirements analysis
+
+  - role: Full-stack Developer
+    time: Jul – Sept 2020
+    company: Online startup
+    city: Remote
+    # city: 
+    details: |
+      - Developing website in Django (Python-based framework)
+      - Database management - designing relations and class dependencies, adding features
+
+    # achievements:
+    #   desc: |
+    #     Praesentium voluptatum deleniti atque corrupti quos dolores et quas
+    #     molestias excepturi sint occaecati cupiditate non provident.
+    #   highlights:
+    #     - Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.
+    #     - At vero eos et accusamus et iusto odio dignissimos.
+    #     - Blanditiis praesentium voluptatum deleniti atque corrupti.
+    #     - Maecenas tempus tellus eget.
+    technologies:
+      - Python
+      - Django
+      - JavaScript
+      - HTML
+      - AJAX
+      - Git
+      - PostgreSQL
+    softskills:
+      - Predicting clients’ needs
+      - Weighing business strategies
+      - Working remotely
+      - Braimstorming development ideas
+
+  - role: Assistant programmer
+    time: Jun — Aug 2019
+    company: Heuthes
+    companylink: https://www.heuthes.pl/
+    city: Szczecin, Poland
+    details: |
+      - Improving user experience of the company’s main product (responsive web design)
+      - Implementing Progressive Web App standard
+    technologies:
+      - JavaScript
+      - jQuery
+      - Bootstrap
+      - HTML/CSS
+    softskills:
+      - Human-computer interaction
+      - 
+
+  - role: Programming Intern
+    time: Jul — Aug 2018
+    company: Tieto EVRY Poland
+    companylink: https://www.tietoevry.com/en/
+    city: Szczecin, Poland
+    details: |
+      - Created a CAN simulator for car cluster using an Arduino board (month-long project)
+      - 1st place in bot games challenge using: minimax algorithm with alpha beta pruning
+      - Participated in 100 hours of courses in networking, python, C and C++, Bash
+    technologies:
+      - C++/C
+      - Arduino
+      - Git
+      - Gerrit
+
+
+
+
+nontechnical:
+  - role: Co-chair of <a class="dont-print" href="https://oxbridgewomenincs8.wixsite.com/2020"> 
+          Oxbridge Women in Computer Science conference
+        </a>  
+    company: Women@CL Cambidge University
+    time: 2020
+    details: |
+        - Conducted a successful outreach campaign, gathered over 120 participants
+        - Finding sponsorship, arranging cooperation with 5 tech companies
+        - Setting up online conference platform, managing website schedule activities
+    softskills:
+      - Event organization
+      - Managing team
+      - Presenting
+      - Inviting keynote speakers
+
+  - role: Operating Officer at <a class="dont-print" href="https://meetit.eu/our-camps/"> Computer Science camps </a> 
+    time: 2019 — 2020
+    company: Meet IT Camps
+    companylink: https://meetit.eu/our-camps/
+    details: |
+      - I was the manger of a camp with 60 participants from 13 countries
+      - Overseeing marketing and sponsoring initiatives, pitching development ideas
+    softskills:
+      - Event organization
+      - Managing volunteers
+      - Scheduling
+      - Assisting special guests
+
+
+
+
 
 projects:
-  title: Projects
   # intro: >
   #   You can list your side projects or open source libraries in this section.
   assignments:
-    - title: Nitpick
-      link: https://github.com/andreoliwa/nitpick
+    # - title: Nitpick
+    #   link: https://github.com/andreoliwa/nitpick
+    #   tagline: >
+    #     A code quality tool to enforce the same configuration across multiple projects.
+    #     Written in Python. Uses git-flow, Travis for CI/CD and semantic-release for automated releases.
+    - title: GirlsWhoML - 5 weeks Machine learning Workshops
+      time: Mar - Apr 2021
+      details: |
+        </br>  
+        linear regression  <span>&#8226;</span>
+        logistics regression <span>&#8226;</span> 
+        neural networks  <span>&#8226;</span> 
+        convolutional neural networks
+
+
+    - title: Participated in
+      # tagline: >         
+      bullets: 
+        - item: 
+          name: Facebook Analytics Academy
+          info: solving a real-world data science challange
+          time: 2020
+        - item:
+          name: GetAhead 
+          info: 8 week virtual program organized by Google
+          time: 2020
+        - item:
+          name: Hackkosice 
+          info: representing Meet IT at the hackathon 
+          time: 2019
+        - item:
+          name: ’Women in Tech Camp’ 
+          info: organized by IT for SHE in Poland 
+          time: 2019
+        - item:
+          name: ’IT in Automotive’ 
+          info: conferences organized by GlobalLogic 
+          time: 2018, 2019
+        - item:
+          name: Maths Beyond Limits International Camp 
+          time: 2018
+
+    - title: >
+        Cambridge English Proficiency Ceritificate (CPE)
+      time: Jun 2018
+      # link: https://github.com/andreoliwa/nitpick
+      # tagline: >
+
+    - title: Project Access Poland
+      # link: https://github.com/andreoliwa/nitpick
       tagline: >
-        A code quality tool to enforce the same configuration across multiple projects.
-        Written in Python. Uses git-flow, Travis for CI/CD and semantic-release for automated releases.
+         Volunteer helping Polish students apply to universities abroad
 
-experiences:
-  - role: Python / PHP / .NET Backend Engineer &amp; DevOps
-    time: Dec 2019 - Apr 2020
-    company: EatFirst (acquired by B2B Food Group)
-    city: Berlin, Germany
-    details: |
-      - Optimized the invoice adjustment tool (PHP): refactored the code to make it fail-safe and reliable
-      - Upgraded to Python 3.7 a SalesForce integration script written in Python 2: remodelled to run on Docker, improved SQL queries and overall performance/code quality
-      - Automated the install of a C#/ASP.NET application using Chocolatey and PowerShell scripts
-      - Collaborated with the Product team using Jira and Confluence
+    - title: Hobbies
+      tagline: windsurfing, volleyball (representing Cambridge in the Premier League)
 
-  - role: Python Backend Engineer &amp; DevOps
-    time: Nov 2018 — Nov 2019
-    company: EatFirst
-    city: Berlin, Germany
-    details: |
-      - Created invoice PDF files with AWS Lambda, replacing manual invoices (Python, NodeJS)
-      - Accelerated the performance of the Data Warehouse/ETL tool by limiting the initial filter to the current month (BI with Pentaho)
-      - Maintained AWS infrastructure (EC2 servers, ECS Fargate containers, S3 buckets, ELB)
-      - Optimized and tuned the PostgreSQL database hosted on Amazon RDS, checking slow queries, deadlocks and indexes (AWS RDS)
-      - Upgraded the whole platform with the latest software, applying security updates and bug fixes
-      - Standardized CI/CD using Jenkins Pipelines, showing a better output, making it easier to replay/rebuild jobs (Groovy)
 
-  - role: Python Backend Engineer
-    time: Oct 2014 — Oct 2018
-    company: EatFirst
-    city: Berlin, Germany
-    details: |
-      - Built a Python RESTful API from scratch to replace a PHP application (Python 3.6, Flask, PostgreSQL 9.6, SQLAlchemy, Alembic)
-      - Streamlined asynchronous jobs using a distributed task queue (Celery 4, Redis)
-      - Shaped a flexible JSON API to be consumed by iOS, Android and web clients
-      - Conceived a reliable and fail-safe payment component
-        - Processed and refunded credit card, SEPA, PayPal and Apple Pay transactions via the Adyen payment gateway
-      - Introduced a comprehensive unit/integration test suite and Sentry monitoring, ensuring safe code changes
-      - Optimized an algorithm for the "travelling salesman problem" with Python and Google Maps/Matrix API
-        - Delivered orders to customers on pre-scheduled slots using the least number of drivers and the fastest route
-        - Assisted the operations team in London with driver routes simulation
-        - Increased efficiency of the delivery service, avoiding human mistakes in route calculation
-      - Developed store/shop/retailer selection by using the current GPS location
-        - Increased performance on geographical SQL queries (PostgreSQL, PostGIS)
-      - Composed email, SMS messages and automated phone calls using Mandrill, Mailchimp and Nexmo
-        - Facilitated marketing campaigns and strengthened customer communication channels
-      - Assembled dev tools to lint and assert proper typing and code quality (PyLint, flake8, MyPy)
-      - Conceptualized a multi-language application, prepared for expansion to other countries (Flask-Babel, Transifex)
-        - One of the first Berlin startups to display bilingual content in English and German to customers
-      - Remodelled container deployment to use ECS Fargate, a serverless technology (Docker, AWS ECS, AWS Fargate)
-        - Minimized costs with EC2 instances
-        - Allocated more containers automatically with auto-scaling when the app was not responding
-      - Designed front-end pages using a Flux-like architecture (Node.js, Riot, Backbone.js, Underscore.js)
-        - Participated in a collective effort to write the remaining web pages before the initial platform release
-      - Collaborated with the team using Agile (Scrum/Kanban) with Trello
 
-  - role: PHP Backend Engineer
-    time: Aug, 2010 — Apr, 2014
-    company: Folha de S.Paulo
-    city: São Paulo, Brazil
-    details: |
-      - Collaborated on the proprietary PHP framework of the company, adding new core classes and improving existing ones
-        - Authored a hyphenation class for Portuguese words, used to split multiline text on classified ads
-        - Enhanced a class to deal with master/detail table data, facilitating the creation of admin interfaces
-        - Conceived a class to manipulate data trees, speeding up data retrieval without using slow recursion techniques
-      - Supported the migration of newspaper subscriptions from a desktop app (written in Oracle Forms) to a web app (PHP, MySQL)
-      - Participated on the Paywall project, limiting articles for readers: free access up to N stories per month; above that, only subscribers can read
-        - First newspaper in Brazil to use this technology in 2012, loosely based on what The New York Times has done in the USA
-        - Streamlined data processing to generate daily reports of visitor count and unique hits count (MongoDB, MySQL)
-        - Computed 5 million records per day and up to 90 million records per month
-      - Implemented a fast search for newspaper articles using a full-text search engine (Sphinx search)
-      - Guided the team during the migration of classified ads from a proprietary third-party desktop system (Windows, C++) to a web app (PHP, MySQL)
-        - Overhauled the credit card app, eliminating double charges and failures, saving company money and increasing customer satisfaction
-        - Integrated the hyphenation module into the ad capture app, reducing the price of the ads for the customers
-      - Spearheaded the use of tools for code quality and coding standards: Code Sniffer, CI with Jenkins, design patterns
+# skills:
+#   title: Current Skills &amp Proficiency
 
-  - role: Desktop Application Engineer
-    time: Jun, 2001 — Jul, 2010
-    company: Folha de S.Paulo - Classifieds Department
-    city: São Paulo, Brazil
-    details: |
-      - Redesigned the blacklist app, optimized PL/SQL queries and stored procedures, reducing execution time from hours to minutes
-      - Orchestrated the conversion of C++ and Visual Basic 6 desktop applications to C#
-      - Designed a C++ app to concentrate all the department reports, moving code from legacy VB6 apps
-        - Generated output in different formats: Excel sheets, text files or e-mail
-        - Connected to different databases: Oracle 11g/10g/9i, Microsoft SQL Server 2005/2000
-      - Published a C# Windows Service to update the bookstore marketplace inventory, using XML files to transfer data
-      - Created C# class libraries, OLE/ActiveX/OCX components
-        - Initiated a C# shared class library, serving as a base for an internal framework
-        - Developed an OLE C++ 1.52 component interfacing with a third-party 16-bit DLL, enabling it to be used by a VB6 32-bit app
-      - Led the migration of version control from Microsoft SourceSafe to Subversion
-      - Maintained standalone Visual Basic 6 applications that interfaced with the third-party classified ads C++ app
-      - Produced application setup executables for standalone VB6 apps using NSIS (Nullsoft Scriptable Install System)
-      - Documented internal technical articles and how-tos with Drupal CMS, after trying Joomla and Wordpress (PHP)
+#   toolset:
+#     - name: Python 3, Flask, REST API
+#       level: 98%
+#     - name: PostgreSQL
+#       level: 98%
 
 # publications:
 #   title: Publications
@@ -204,31 +322,6 @@ experiences:
 #       authors: Donald E. Knuth
 #       conference: Addison-Wesley, 1968
 
-#     - title: "Genetic Programming III: Darwinian Invention &amp; Problem Solving"
-#       link: "#"
-#       authors: Koza, J.R., Andre, D., Bennett, F.H., Keane, M.A.
-#       conference: "Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edn. (1999)"
-
-#     - title: A syntax directed compiler for Algol 60
-#       link: "#"
-#       authors: Edgar T. Irons
-#       conference: "Comm. ACM 4 (1961), 51–55"
-
-education:
-  - degree: Bachelor Degree - Psychology (incomplete)
-    university: USP - University of São Paulo
-    # time: 1995 — 1996
-    details: |
-      I attended university in a non tech-related field.
-      It helped to open up my mind, think different and to see things from another point of view.
-  - degree: Technology Specialist / Software Engineer
-    university: Federal Technical School of São Paulo (ETFSP/IFSP)
-    # time: 1990 — 1993
-    details: |
-      Vocational school in which I learned sofware development techniques and a few programming languages:
-      - C, C++ and Pascal languages, Object-Oriented Programming
-      - Relational databases
-      - Scope definition, requirements analysis, logical design, UML diagrams
 
 footer: >
-  Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
+  I agree that my personal data will be processed in order to recruit for the position I am applying for.
