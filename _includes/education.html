@@ -49,8 +49,8 @@
 
       {% if graduation.subjects %}
         {% for year in graduation.subjects %}
+        <h4 class="subjects resume-timeline-item-desc-heading font-weight-bold">{{ year.title }}:</h4>
         <div class="subjects-div">
-          <h4 class="subjects resume-timeline-item-desc-heading font-weight-bold">{{ year.title }}:</h4>
           {% for sub in year.courses %}
             <span class="badge badge-primary badge-pill">{{ sub }}</span>
           {% endfor %}

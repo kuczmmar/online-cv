@@ -5,7 +5,7 @@
   <h2 class="section-title">
     <span class="fa-stack fa-xs">
       <i class="fas fa-circle fa-stack-2x"></i>
-      <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
+      <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
     </span>
     {{ site.data.labels.projects | default: "Projects" }}
   </h2>
@@ -26,15 +26,23 @@
         {{ project.title }}
         {% endif %}
       </span>
+      {% if project.time %}
+        <div class="project-time">{{ project.time }}</div>
+      {% endif %}
 
       {% if project.tagline %}
       - <span class="project-tagline">{{ project.tagline }}</span>
       {% endif %}
 
       {% if project.details %}
-        {% for item in project.details %}
+      <span class="project-tagline">{{ project.details }}</span>
+      {% endif %}
+
+      {% if project.bullets %}
+        {% for item in project.bullets %}
           <div class="d-flex flex-column flex-md-row">
-            <span class="bullet">&#8226;</span> {{ item.name }}
+            <span class="bullet">&#8226;</span> <b>{{ item.name }}</b>
+            {% if item.info %} - {{ item.info }} {% endif %}
               <div class="project-time">{{ item.time }}</div>
           </div><!--//details-->
         {% endfor %}

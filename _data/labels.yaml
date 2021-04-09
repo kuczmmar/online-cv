@@ -9,8 +9,9 @@ language: # default: Language
 skills: # default: Skills &amp; Tools
 
 
-projects: Programmes & Certificates
+projects: Programmes & Certificates & Interests
 nontechnical: Nontechnical projects
 achievements: # default: Achievements
 technologies: # default: Technologies used
 experience: Work Experience & Projects
+technical_sidebar: Tech skills

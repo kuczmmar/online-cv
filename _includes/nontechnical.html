@@ -1,17 +1,17 @@
 {% assign experiences = site.data.data.nontechnical %}
 {% if experiences %}
-<section class="section experiences-section">
+<section class="section experiences-section dont-break">
   <h2 class="section-title">
     <span class="fa-stack fa-xs">
       <i class="fas fa-circle fa-stack-2x"></i>
-      <i class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
+      <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
     </span>
     {{ site.data.labels.nontechnical | default: "Nontechnical Experience & Projects" }}
   </h2>
 
   <div class="resume-section-content">
         {% for experience in experiences %}
-          <div class="dont-break">
+        <article class="pb-5 dont-break">
               <hr class="print-line-upper">
                 <div class="d-flex flex-column flex-md-row">
                   <div class="upper-row">
@@ -47,7 +47,15 @@
                         <span class="technology-badge badge badge-primary badge-pill">{{ technology }}</span>
                     {% endfor %}
                 {% endif %}
-              </div>
+                {% if experience.softskills %}
+                <div class="badges-container">
+                <h4 class="technologies font-weight-bold">{{ site.data.labels.softskills | default: "Soft skills" }}:</h4>
+                    {% for skill in experience.softskills %}
+                        <span class="softskills-badge badge badge-primary badge-pill">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+        </article>
         {% endfor %}
 </div>
 

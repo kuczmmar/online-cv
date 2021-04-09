@@ -1,4 +1,7 @@
 /* ======= Base ======= */
+:root {
+  --light-gray: rgba(256, 256, 256, 0.6);
+}
 body {
   font-family: "Roboto", sans-serif;
   color: $text-color-secondary;
@@ -68,7 +71,7 @@ p {
     margin-bottom: 10px;
   }
   .tagline {
-    color: rgba(256, 256, 256, 0.6);
+    color: var(--light-gray);
     font-size: 16px;
     font-weight: 400;
     margin-top: 0;
@@ -86,6 +89,7 @@ p {
     border-radius: 100%;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   }
+
   .contact-list {
     .fas,
     .fab {
@@ -101,7 +105,10 @@ p {
     }
   }
   .container-block {
-    padding: 25px 15px 5px 30px;
+    padding: 25px 15px 15px 30px;
+  }
+  .skills-block-title {
+    padding: 25px 15px 6px 30px;
   }
   .container-block-title {
     text-transform: uppercase;
@@ -123,13 +130,13 @@ p {
       }
     }
     .meta {
-      color: rgba(256, 256, 256, 0.6);
+      color: var(--light-gray);
       font-weight: 500;
       margin-bottom: 0px;
       margin-top: 0;
     }
     .time {
-      color: rgba(256, 256, 256, 0.6);
+      color: var(--light-gray);
       font-weight: 500 !important ;
       margin-bottom: 0px;
       font-size: 14px !important ;
@@ -137,7 +144,7 @@ p {
   }
   .languages-container {
     .lang-desc {
-      color: rgba(256, 256, 256, 0.6);
+      color: var(--light-gray);
     }
   }
 
@@ -155,6 +162,7 @@ p {
     margin-bottom: 0;
     li {
       margin-bottom: 10px;
+      margin-left: 10px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -244,7 +252,7 @@ p {
   .subjects {
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
     margin-top: 5px;
   }
 
@@ -253,7 +261,10 @@ p {
     display: inline;
   }
   .subjects-div{
-    margin-bottom: 5px;
+    margin-bottom: 5px;    
+    margin-top: -2rem;
+    margin-left: 60px;
+    text-align: center;
   }
 
   .city {
@@ -399,8 +410,20 @@ p {
   position: relative !important;
 }
 
-.badge {
-  background-color: lighten($theme-color, 15%);
+.badges-container {
+  padding-left: 20px;
+}
+.badge {    
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 2px;
+  padding: 3px 8px;
+  background-color: lighten($theme-color, 5%);
+}
+// #a48fe2
+.softskills-badge {
+  background-color: lighten($theme-color, 38%);
+  color: $text-color-secondary;
 }
 
 hr.print-line-upper,
@@ -431,4 +454,28 @@ hr.education-line-lower {
 
 .only-online {
   display: inline;
+}
+
+div .skills-container{
+  padding: 1px 4px ;
+  text-align: center;
+  hr {
+    margin-top: 2px;
+    margin-bottom: 3px;
+    width: 68%;
+  }
+
+  .technical-skills .name{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    color: var(--light-gray) ;
+    font-weight: 600 ;
+    font-size: 12px ;
+    letter-spacing: 1px ;
+  }
+
+  .technical-skills {
+    margin-bottom: 30px;
+
+  }
 }
