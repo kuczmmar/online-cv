@@ -5,6 +5,13 @@
   body {
     font-size: 13px;
   }
+  @page  
+  { 
+    size: auto;   /* auto is the initial value */ 
+
+    /* this affects the margin in the printer settings */ 
+    margin: 0.4cm !important;  
+  } 
 
   .dont-break {
     break-inside: avoid;
@@ -14,7 +21,7 @@
   .main-wrapper {
     .section-title {
       margin-bottom: 13px;
-      color: lighten($theme-color, 10%);
+      color: $theme-color;
       break-inside: avoid;
     }
     .fa-inverse {
@@ -127,8 +134,7 @@
   }
 
   footer {
-    padding-top: -300px;
-    // display: none;
+    display: none;
   }
 
   // Skillset
@@ -191,13 +197,14 @@
     font-size: 12px;
     font-weight: 600;
     margin-right: 1.5px;
-    padding: 1px 4.5px;
+    padding: 2px 4.5px;
     background-color: lighten($theme-color, 5%) !important;
   }
   // #a48fe2
   .softskills-badge {
-    background-color: lighten($theme-color, 38%) !important;
-    color: $text-color-secondary;
+    font-weight: 600;
+    background-color: lighten($theme-color, 42%) !important;
+    color: darken($text-color-secondary,10%);
   }
 
   .achievements,
@@ -209,7 +216,7 @@
   hr.print-line-upper {
     display: block;
     border-color: lighten($theme-color, 10%) !important;
-    margin-top: -8px;
+    margin-top: -1px;
     margin-bottom: 4px;
     border-width: 1px;
   }

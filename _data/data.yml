@@ -1,4 +1,4 @@
-# run jekyll serve
+# jekyll serve
 
 sidebar:
   about: False # set to False or comment line if you want to remove the "how to use?" in the sidebar
@@ -109,7 +109,7 @@ education:
     time: 2016 — 2019
     details: |
       - Matura exam (A levels equivalent) - avg. score top 2% in the country
-      - Maths, computer science, physics national competitions and camps
+      - Participated in maths, computer science, physics national competitions and camps
   #  extended: Maths, Physics, English
 
 # career-profile:
@@ -266,8 +266,8 @@ projects:
           info: solving a real-world data science challange
           time: 2020
         - item:
-          name: GetAhead 
-          info: 8 week virtual program organized by Google
+          name: Google GetAhead 
+          info: 8 weeks virtual coding program
           time: 2020
         - item:
           name: Hackkosice 
