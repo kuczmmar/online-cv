@@ -423,7 +423,7 @@ p {
 // #a48fe2
 .softskills-badge {
   background-color: lighten($theme-color, 38%);
-  color: $text-color-secondary;
+  color: darken($text-color-secondary,10%);
 }
 
 hr.print-line-upper,
