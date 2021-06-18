@@ -11,3 +11,5 @@ My CV is available at [https://kuczmmar.github.io/online-cv/](https://kuczmmar.g
 
 ## License
 This project is licensed under the [MIT license](LICENSE.txt).
+
+<!-- Thanks to andreoliwa: https://andreoliwa.github.io/online-cv/ -->
