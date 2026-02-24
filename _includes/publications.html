@@ -1,32 +1,29 @@
 {% assign publications = site.data.data.publications %}
 {% if publications %}
-<section class="section publications-section">
-
-  <h2 class="section-title">
-    <span class="fa-stack fa-xs">
-      <i class="fas fa-circle fa-stack-2x"></i>
-      <i class="fas fa-file-alt fa-stack-1x fa-inverse"></i>
-    </span>
+<section class="mb-6 print:mb-2">
+  <h2 class="text-base font-semibold uppercase tracking-widest text-theme border-b pb-1 mb-3 print:mb-1" style="border-color: rgba(161,82,119,0.3);">
     {{ publications.title }}
   </h2>
 
   {% if publications.intro %}
-  <div class="intro">
+  <div class="text-gray-600 text-sm mb-3">
     {{ publications.intro | markdownify }}
-  </div><!--//intro-->
+  </div>
   {% endif %}
 
   {% for publication in publications.papers %}
-  <div class="item">
-    {% if publication.link %}
-      <li><a href="{{ publication.link }}">{{ publication.title }}</a></li>
-    {% else %}
-      <li>{{ publication.title }}</li>
-    {% endif %}
-    <div class="publication-authors">{{ publication.authors }}</div>
-    <div class="publication-conference">{{ publication.conference }}</div>
-  </div><!--//item-->
+  <div class="mb-2">
+    <p class="font-semibold text-gray-800 text-sm mb-0.5">
+      {% if publication.link %}
+      <a href="{{ publication.link }}" class="text-theme hover:underline">{{ publication.title }}</a>
+      {% else %}
+      {{ publication.title }}
+      {% endif %}
+    </p>
+    <p class="text-gray-500 text-xs italic">{{ publication.authors }}</p>
+    <p class="text-gray-400 text-xs">{{ publication.conference }}</p>
+  </div>
   {% endfor %}
 
-</section><!--//section-->
+</section>
 {% endif %}
