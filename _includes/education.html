@@ -17,53 +17,42 @@
 
   </div><!--//education-container-->
   {% else %}
-  <section class="section educations-section">
-
-    <h2 class="section-title">
-      <span class="fa-stack fa-xs">
-        <i class="fas fa-circle fa-stack-2x"></i>
-        <i class="fas fa-graduation-cap fa-stack-1x fa-inverse"></i>
-      </span>
+  <section class="mb-6 print:mb-2">
+    <h2 class="text-base font-semibold uppercase tracking-widest text-theme border-b pb-1 mb-3 print:mb-1" style="border-color: rgba(161,82,119,0.3);">
       Education
     </h2>
 
     {% for graduation in education %}
-    <div class="item">
-
-      <div class="meta">
-        <hr class="education-line-upper">
-        <div class="upper-row">
-          <h3 class="degree">{{ graduation.degree }}</h3>
-          <div class="time">{{ graduation.time }}</div>
-          </h3>
-        </div><!--//upper-row-->
-
-        <div class="university">{{ graduation.university }}</div>
-        <hr class="education-line-lower">
-      </div><!--//meta-->
+    <div class="mb-3 print:mb-1 dont-break">
+      <div class="flex justify-between items-baseline gap-4 pb-2 mb-3 border-b border-gray-100 print:pb-1 print:mb-1">
+        <div class="flex-1">
+          <h3 class="font-bold text-gray-800 text-base inline print:text-sm">{{ graduation.degree }}</h3>
+          <span class="text-gray-500 text-xs font-semibold uppercase tracking-wide ml-1">
+            &bull; {{ graduation.university }}
+          </span>
+        </div>
+        <span class="text-gray-400 text-sm shrink-0 whitespace-nowrap print:text-xs">
+          {{ graduation.time }}
+        </span>
+      </div>
 
       {% if graduation.details %}
-      <div class="details">
+      <div class="text-gray-600 text-sm print:text-xs [&_ul]:list-disc [&_ul]:pl-5 [&_li]:">
         {{ graduation.details | markdownify }}
-      </div><!--//details-->
+      </div>
+      {% endif %}
 
       {% if graduation.subjects %}
+      <div class="text-gray-600 text-xs mt-1">
         {% for year in graduation.subjects %}
-        <h4 class="subjects resume-timeline-item-desc-heading font-weight-bold">{{ year.title }}:</h4>
-        <div class="subjects-div">
-          {% for sub in year.courses %}
-            <span class="badge badge-primary badge-pill">{{ sub }}</span>
-          {% endfor %}
-        </div>
+        <p><strong>{{ year.title }}:</strong> {{ year.courses | join: ", " }}</p>
         {% endfor %}
+      </div>
       {% endif %}
 
-
-      {% endif %}
-
-    </div><!--//item-->
+    </div>
     {% endfor %}
 
-  </section><!--//section-->
+  </section>
   {% endif %}
 {% endif %}

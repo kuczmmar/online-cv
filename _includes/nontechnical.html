@@ -1,63 +1,55 @@
 {% assign experiences = site.data.data.nontechnical %}
 {% if experiences %}
-<section class="section experiences-section dont-break">
-  <h2 class="section-title">
-    <span class="fa-stack fa-xs">
-      <i class="fas fa-circle fa-stack-2x"></i>
-      <i class="fas fa-archive fa-stack-1x fa-inverse"></i>
-    </span>
+<section class="mb-6 print:mb-2 dont-break">
+  <h2 class="text-base font-semibold uppercase tracking-widest text-theme border-b pb-1 mb-3 print:mb-1" style="border-color: rgba(161,82,119,0.3);">
     {{ site.data.labels.nontechnical | default: "Nontechnical Experience & Projects" }}
   </h2>
 
-  <div class="resume-section-content">
-        {% for experience in experiences %}
-        <article class="pb-5 dont-break">
-              <hr class="print-line-upper">
-                <div class="d-flex flex-column flex-md-row">
-                  <div class="upper-row">
-                      <h3 class="job-title">{{ experience.role }}
-                        {% if experience.subrole %}
-                        <small class="text-muted">({{ experience.subrole }})</small>
-                        {% endif %} 
-                      </h3>
-                      <h5 class="time">{{ experience.time }}</h5>
-                  </div><!--//upper-row-->
+  {% for experience in experiences %}
+  <article class="mb-4 print:mb-1 dont-break">
+    <div class="flex justify-between items-baseline gap-4 pb-2 mb-3 border-b border-gray-100 print:pb-1 print:mb-1">
+      <div class="flex-1 flex flex-wrap items-baseline gap-1">
+        <h3 class="font-bold text-gray-800 text-base inline print:text-sm">{{ experience.role }}
+          {% if experience.subrole %}
+          <small class="text-gray-500 font-normal">({{ experience.subrole }})</small>
+          {% endif %}
+        </h3>
+        {% if experience.company %}
+        <span class="text-gray-500 text-xs font-semibold uppercase tracking-wide">
+          &bull;
+          {% if experience.companylink %}
+          <a href="{{ experience.companylink }}" target="_blank" class="dont-print hover:underline">{{ experience.company }}</a>
+          {% else %}
+          {{ experience.company }}
+          {% endif %}
+        </span>
+        {% endif %}
+        {% if experience.city %}
+        <span class="text-gray-400 text-xs">&bull; <i class="fas fa-map-pin"></i> {{ experience.city }}</span>
+        {% endif %}
+      </div>
+      <span class="text-gray-400 text-sm shrink-0 whitespace-nowrap print:text-xs">
+        {{ experience.time }}
+      </span>
+    </div>
 
-                  {% if experience.company %}
-                    <div class="company">
-                      {% if experience.companylink%}
-                      <a href="{{experience.companylink}}" target="_blank" class="dont-print"> {{ experience.company }} </a>
-                      {% else %}
-                      {{ experience.company }}
-                      {% endif %}
-                      {% if experience.city %}
-                        <span class="city"><i class="fas fa-map-pin"></i>&nbsp;{{ experience.city }}</span>
-                      {% endif %}
-                    </div>
-                  {% endif %}
-                </div><!--//row-->
-                <hr class="print-line-lower">
-                {% if experience.details %}
-                <p>{{ experience.details | markdownify }}</p>
-                {% endif %}
+    <div class="text-gray-600 text-sm print:text-xs [&_ul]:list-disc [&_ul]:pl-5 [&_li]:">
+      {% if experience.details %}
+      <div class="mb-1">{{ experience.details | markdownify }}</div>
+      {% endif %}
+      {% if experience.technologies or experience.softskills %}
+      <ul class="mt-1 text-xs text-gray-500 list-none p-0">
+        {% if experience.technologies %}
+        <li><strong>{{ site.data.labels.technologies | default: "Technologies used" }}:</strong> {{ experience.technologies | join: ", " }}</li>
+        {% endif %}
+        {% if experience.softskills %}
+        <li><strong>{{ site.data.labels.softskills | default: "Soft skills" }}:</strong> {{ experience.softskills | join: ", " }}</li>
+        {% endif %}
+      </ul>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
 
-                {% if experience.technologies %}
-                <h4 class="technologies font-weight-bold">{{ site.data.labels.technologies | default: "Technologies used" }}:</h4>
-                    {% for technology in experience.technologies %}
-                        <span class="technology-badge badge badge-primary badge-pill">{{ technology }}</span>
-                    {% endfor %}
-                {% endif %}
-                {% if experience.softskills %}
-                <div class="badges-container">
-                <h4 class="technologies font-weight-bold">{{ site.data.labels.softskills | default: "Soft skills" }}:</h4>
-                    {% for skill in experience.softskills %}
-                        <span class="softskills-badge badge badge-primary badge-pill">{{ skill }}</span>
-                    {% endfor %}
-                </div>
-                {% endif %}
-        </article>
-        {% endfor %}
-</div>
-
-</section><!--//section-->
+</section>
 {% endif %}

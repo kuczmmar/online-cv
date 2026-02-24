@@ -1,259 +1,42 @@
 @media print {
   @page {
     size: A4;
+    margin: 0.5cm;
   }
-  body {
-    font-size: 13px;
-  }
-  @page  
-  { 
-    size: auto;   /* auto is the initial value */ 
 
-    /* this affects the margin in the printer settings */ 
-    margin: 0.4cm !important;  
-  } 
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .shadow-md {
+    box-shadow: none !important;
+  }
+
+  // Increase inter-section spacing
+  section {
+    margin-bottom: 1rem !important;
+  }
+
+  // Increase spacing between individual experience/education entries
+  article, .dont-break {
+    margin-bottom: 0.75rem !important;
+  }
 
   .dont-break {
     break-inside: avoid;
-  }
-
-
-  .main-wrapper {
-    .section-title {
-      margin-bottom: 13px;
-      color: $theme-color;
-      break-inside: avoid;
-    }
-    .fa-inverse {
-      color: white !important;
-    }
-
-    .projects-section .item {
-      margin-bottom: 10px;
-    }
-
-    .section {
-      margin-bottom: 10px !important;
-      padding-top: 10px;
-    }
-
-    .time {
-      position: absolute;
-      right: 0;
-      top: -6px;
-      color: #97AAC3;
-      // float: right;
-      // -webkit-print-color-adjust: exact;
-      font-size: 15px;
-    }
-  }
-
-  .main-wrapper 
-  .main-wrapper .company {
-    margin-bottom: -3px;
-  }
-  .sidebar-wrapper {
-    position: static;
-    float: right;
-    -webkit-print-color-adjust: exact;
-    width: 170px;
-    height: 100%;
-    min-height: 1000px;
-    margin-top: 30px;
-
-    // Print all the colors
-    color: unset;
-    border-left: 2px solid lighten($theme-color, 40%);
-    margin-left: 1em;
-    a,
-    .profile-container,
-    .avatar,
-    .tagline,
-    .languages-container .lang-desc {
-      color: unset;
-    }
-    img.avatar {
-      max-width: 120px;
-      padding: 0px 30px;
-    }
-    .profile-container {
-      padding: 10px;
-      padding-top: 10px;
-    }
-    .container-block-title {
-      margin-bottom: 8px;
-    }
-    .container-block{
-      padding-right: 5px; 
-      padding-left: 20px;
-    }
-    ul.list-unstyled.contact-list {
-      margin-bottom: 0px !important;
-    }
-    .skills-block-title {
-      padding-right: 0px;
-      padding-left:  0px;
-      padding-bottom: 8px;
-    }
-
-    .name {
-      font-size: 22.5px;
-      font-weight: 700;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-    // .tagline {
-    //   padding-left: 7px;
-    // }
-
-    .cvlink {
-      display: block;
-      color: darken($theme-color, 10%);
-      text-decoration: underline;
-    }
-    .contact-list li{
-      margin-bottom: 8px;
-    }
-    .interests-container {
-      margin-left: 20px;
-    }
-    .interests-container .interests-list li{
-      margin-bottom: 2px;
-    }
-
-    // Color also had to be removed on bootstrap.min.css.
-    // There is no other way to override Bootstrap's style.
-    // Replaced:
-    // @media print{*,:after,:before{color:#000!important;...
-    // by
-    // @media print{*,:after,:before{...
-  }
-
-  .remove-container.container-block {
-    display: none;
   }
 
   footer {
     display: none;
   }
 
-  // Skillset
-  .level-bar {
-    display: none;
-  }
-  // TODO This is a hacky way to use bullets, since I couldn't use "list-style-type: disc;" anywhere:
-  .level-title::before {
-    content: "• ";
-  }
-  .level-title {
-    white-space: nowrap;
-  }
-  .skillset {
-    padding-left: 0;
-    margin-left: -5px;
-    list-style: none;
-  }
-  .skillset > li {
-    display: inline-block;
-    padding-right: 5px;
-    padding-left: 5px;
-  }
-
   // Don't expand links for email, phone, map
   a.dont-print:after {
     content: "";
-  }
-
-  a {
-    color: darken($theme-color, 10%);
-    text-decoration: underline;
-  }
-
-  .resume-timeline {
-    padding-left: 0rem;
-    &:before {
-        display: none;
-    }
-  }
-  
-  .resume-timeline-item {
-    &:before {
-        display: none;
-    }
-  }
-
-  // .badge {
-  //   padding: 1px 4px;
-  //   border: 1px solid lighten($theme-color, 10%);
-  //   color: darken($theme-color, 10%);
-  //   font-size: 12px;
-  //   font-weight: 500;
-  // }
-  // .softskills-badge {
-  //   border: 1px solid lighten($text-color-secondary, 28%);
-  //   color: $text-color-secondary;
-  // }
-  .badge {    
-    font-size: 12px;
-    font-weight: 600;
-    margin-right: 1.5px;
-    padding: 2px 4.5px;
-    background-color: lighten($theme-color, 5%) !important;
-  }
-  // #a48fe2
-  .softskills-badge {
-    font-weight: 600;
-    background-color: lighten($theme-color, 42%) !important;
-    color: darken($text-color-secondary,10%);
-  }
-
-  .achievements,
-  .technologies,
-  .subjects {
-    display: inline;
-  }
-
-  hr.print-line-upper {
-    display: block;
-    border-color: lighten($theme-color, 10%) !important;
-    margin-top: -1px;
-    margin-bottom: 4px;
-    border-width: 1px;
-  }
-  
-  hr.print-line-lower {
-    display: block;
-    border-color: lighten($theme-color, 10%) !important;
-    margin-top: -8px;
-    margin-bottom: -3px;
-    border-width: 1px;
-  }
-
-  hr.education-line-lower {
-    margin-bottom: 5px;
-  }
-
-  .only-online {
-    display: none;
-  }
-
-  div .skills-container{
-    .fas, .far{
-      color: lighten($theme-color, 20%);
-    }
-    hr {
-      border-color: lighten($theme-color, 30%) !important;
-    }
-  
-    .technical-skills .name{
-      color: lighten($theme-color, 20%) !important ;
-      font-weight: 600 ;
-      font-size: 11px ;
-      letter-spacing: 0px ;
-    }
-  
-    .technical-skills .details{
-      margin-bottom: 10px;
-    }
   }
 }

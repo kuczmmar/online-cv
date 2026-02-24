@@ -2,18 +2,33 @@
 #Add "layout: compress" here to compress the html code
 ---
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en">
 {% include head.html %}
 
-<body>
-  <div class="wrapper">
-    {% include sidebar.html %}
+<body class="bg-gray-100 font-sans text-sm antialiased print:bg-white">
+  <div class="max-w-4xl mx-auto bg-white shadow-md">
+    <header class="bg-theme text-white py-8 px-12 print:bg-white print:text-gray-800 print:py-2 print:px-6">
+      {% assign sidebar = site.data.data.sidebar %}
+      <h1 class="text-4xl font-black mb-3 print:text-2xl print:mb-2">{{ sidebar.name }}</h1>
+      <div class="flex flex-wrap gap-5 text-sm print:gap-3 print:text-xs">
+        {% if sidebar.email %}
+        <span class="inline-flex items-center gap-1.5"><i class="fas fa-envelope"></i> {{ sidebar.email }}</span>
+        {% endif %}
+        {% if sidebar.city %}
+        <span class="inline-flex items-center gap-1.5"><i class="fas fa-map-pin"></i> {{ sidebar.city }}</span>
+        {% endif %}
+        {% if sidebar.linkedin %}
+        <span class="inline-flex items-center gap-1.5"><i class="fab fa-linkedin"></i> linkedin.com/in/{{ sidebar.linkedin }}</span>
+        {% endif %}
+        {% if sidebar.github %}
+        <span class="inline-flex items-center gap-1.5"><i class="fab fa-github"></i> github.com/{{ sidebar.github }}</span>
+        {% endif %}
+      </div>
+    </header>
 
-    <div class="main-wrapper">
+    <main class="px-12 py-8 print:px-6 print:py-2">
         {{ content }}
-    </div>
+    </main>
   </div>
 
   {% include footer.html %}
@@ -22,4 +37,3 @@
 </body>
 
 </html>
-

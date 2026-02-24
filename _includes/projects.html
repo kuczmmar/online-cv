@@ -1,55 +1,45 @@
 {% assign projects = site.data.data.projects %}
 {% if projects %}
-<section class="section projects-section">
-
-  <h2 class="section-title">
-    <span class="fa-stack fa-xs">
-      <i class="fas fa-circle fa-stack-2x"></i>
-      <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
-    </span>
+<section class="mb-6 print:mb-2">
+  <h2 class="text-base font-semibold uppercase tracking-widest text-theme border-b pb-1 mb-3 print:mb-1" style="border-color: rgba(161,82,119,0.3);">
     {{ site.data.labels.projects | default: "Projects" }}
   </h2>
 
   {% if projects.intro %}
-  <div class="intro">
-      <p>{{ projects.intro }}</p>
-  </div><!--//intro-->
+  <p class="text-gray-600 text-sm mb-3">{{ projects.intro }}</p>
   {% endif %}
 
   {% for project in projects.assignments %}
-    <div class="item">
-
-      <span class="project-title">
+  <div class="mb-3 print:mb-1">
+    <div class="flex justify-between items-baseline gap-2">
+      <span class="font-semibold text-theme text-sm">
         {% if project.link %}
-        <a class="dont-print" href="{{ project.link }}" target="_blank">{{ project.title }}</a>
+        <a class="dont-print hover:underline" href="{{ project.link }}" target="_blank">{{ project.title }}</a>
         {% else %}
         {{ project.title }}
         {% endif %}
       </span>
       {% if project.time %}
-        <div class="project-time">{{ project.time }}</div>
+      <span class="text-gray-400 text-xs shrink-0 whitespace-nowrap">{{ project.time }}</span>
       {% endif %}
-
-      {% if project.tagline %}
-      - <span class="project-tagline">{{ project.tagline }}</span>
-      {% endif %}
-
-      {% if project.details %}
-      <span class="project-tagline">{{ project.details }}</span>
-      {% endif %}
-
-      {% if project.bullets %}
-        {% for item in project.bullets %}
-          <div class="d-flex flex-column flex-md-row">
-            <span class="bullet">&#8226;</span> <b>{{ item.name }}</b>
-            {% if item.info %} - {{ item.info }} {% endif %}
-              <div class="project-time">{{ item.time }}</div>
-          </div><!--//details-->
-        {% endfor %}
-      {% endif %}
-
-    </div><!--//item-->
+    </div>
+    {% if project.tagline %}
+    <p class="text-gray-600 text-sm">{{ project.tagline }}</p>
+    {% endif %}
+    {% if project.details %}
+    <p class="text-gray-600 text-sm">{{ project.details }}</p>
+    {% endif %}
+    {% if project.bullets %}
+    {% for item in project.bullets %}
+    <div class="flex items-baseline gap-2 text-sm">
+      <span class="text-gray-400 shrink-0">•</span>
+      <span class="flex-1"><strong>{{ item.name }}</strong>{% if item.info %} — {{ item.info }}{% endif %}</span>
+      {% if item.time %}<span class="text-gray-400 text-xs shrink-0">{{ item.time }}</span>{% endif %}
+    </div>
+    {% endfor %}
+    {% endif %}
+  </div>
   {% endfor %}
 
-</section><!--//section-->
+</section>
 {% endif %}

@@ -1,5 +1,4 @@
 {% assign sidebar = site.data.data.sidebar %}
-<div class="sidebar-wrapper">
 
   <div class="profile-container">
 
@@ -28,12 +27,9 @@
   {% endif %}
 
   {% include language.html %}
-  {% include sidebar_skills.html %}
   {% include interests.html %}
   {% include hobby.html %}
 
   {% if sidebar.about %}
     {% include about.html %}
   {% endif %}
-
-</div><!--//sidebar-wrapper-->
